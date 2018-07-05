@@ -2,7 +2,9 @@
 
 int main()
 {
-	cout << "Hello World!\n";
-	keep_window_open();
-	return 0;
+    cout << "Please enter your name:\n";
+    string first_name;
+    cin >> first_name;
+    cout << "Hello" << first_name;
+
 }
