@@ -5,7 +5,7 @@ int main(){
 	string first_name;
 	int age;
 	cin >> first_name;
-	cout << "Please enter your age:\n";
+	cout << "Please enter your name:\n";
 	cin >> age;
-	cout << first_name << "," << age << "\n";
+	cout << first_name << "," << age;
 }
