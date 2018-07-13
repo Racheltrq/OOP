@@ -73,9 +73,10 @@ double expression(){
 			default:
 				ts.putback(t);
 				return left;
+		}
 		cout << "left: " << left;
 		t = ts.get();
-		}
+		
 	}
 }
 
