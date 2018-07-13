@@ -94,7 +94,7 @@ int main(){
 		if(t.kind == ';') cout << " = " << val << '\n';
 			else ts.putback(t);
 		val = expression();
-		cout << 'Done';
+		cout << "Done";
 	}
 	cout << "\nCALCULATOR TERMINATED\n";
 	return 0;
