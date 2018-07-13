@@ -63,7 +63,6 @@ double expression(){
 		switch(t.kind){
 			case '+':
 				return left + term();
-				
 				break;
 			case '-':
 				return left - term();				
@@ -95,6 +94,8 @@ int main(){
 			else ts.putback(t);
 		val = expression();
 	}
+	cout << "\nCALCULATOR TERMINATED\n";
+	return 0
 }
 
 
