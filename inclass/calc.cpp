@@ -70,7 +70,7 @@ double expression(){
 			default:
 				ts.putback(t);
 				return left;
-		Token t = ts.get();
+		t = ts.get();
 		}
 	}
 }
