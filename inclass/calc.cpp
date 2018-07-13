@@ -64,6 +64,7 @@ double expression(){
 		switch(t.kind){
 			//cout << "Done" << " ";
 			case '+':
+
 				left = left + term();
 				break;
 			case '-':
@@ -72,6 +73,7 @@ double expression(){
 			default:
 				ts.putback(t);
 				return left;
+		cout << "left: " << left;
 		t = ts.get();
 		}
 	}
