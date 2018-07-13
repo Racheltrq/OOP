@@ -61,6 +61,7 @@ double expression(){
 	Token t = ts.get();
 	while(true){
 		switch(t.kind){
+			cout << "Done" << " ";
 			case '+':
 				left = left + term();
 				break;
