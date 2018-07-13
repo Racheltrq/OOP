@@ -28,29 +28,29 @@ Token Token_stream::get(){
 		full = false;
 		return buffer;
 	}
-		char ch;
-		cin >> ch;
-		switch(ch){
-			case ';':
-			case 'q':
-			case '(':
-			case ')':
-			case '+':
-			case '-':
-			case '*':
-			case '/':
-			return Token{ch};
-			case '.':
-			case '0': case '1': case '2': case '3': case '4':
-			case '5': case '6': case '7': case '8': case '9':
-			{
-				cin.putback(ch);
-				double val;
-				cin >> val;
-				return Token{'8', val};
-			}
-
+	char ch;
+	cin >> ch;
+	switch(ch){
+		case ';':
+		case 'q':
+		case '(':
+		case ')':
+		case '+':
+		case '-':
+		case '*':
+		case '/':
+		return Token{ch};
+		case '.':
+		case '0': case '1': case '2': case '3': case '4':
+		case '5': case '6': case '7': case '8': case '9':
+		{
+			cin.putback(ch);
+			double val;
+			cin >> val;
+			return Token{'8', val};
 		}
+
+	}
 }
 
 
@@ -62,14 +62,15 @@ double expression(){
 	while(true){
 		switch(t.kind){
 			case '+':
-				return left + term();
+				left = left + term();
 				break;
 			case '-':
-				return left - term();				
+				left = left - term();				
 				break;
 			default:
 				ts.putback(t);
 				return left;
+		Token t = ts.get();
 		}
 	}
 }
