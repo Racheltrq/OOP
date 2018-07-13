@@ -95,6 +95,6 @@ int main(){
 		val = expression();
 	}
 	cout << "\nCALCULATOR TERMINATED\n";
-	return 0
+	return 0;
 }
 
