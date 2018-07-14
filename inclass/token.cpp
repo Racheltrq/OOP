@@ -11,7 +11,7 @@ Token get_token();
 vector<Token> tokens;
 
 int main(){
-	Token t = get_token();
+	//Token t = get_token();
 	for (Token t = get_token(); t.kind != 'q'; t = get_token())
 		tokens.push_back(t);
 	//while(t.kind != 'q'){
@@ -19,6 +19,7 @@ int main(){
 	//	t = get_token();
 	//}
 	for(Token tok: tokens){
+		cout << tok.kind;
 		if (tok.kind = '8')
 			cout << "A number token with val = " << tok.value << '\n';
 		else if (tok.kind = 'N')
