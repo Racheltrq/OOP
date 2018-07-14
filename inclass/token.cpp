@@ -12,10 +12,12 @@ vector<Token> tokens;
 
 int main(){
 	Token t = get_token();
-	while(t.kind != 'q'){
+	for (Token t = get_token(); t.kind != 'q'; t = get_token)
 		tokens.push_back(t);
-		t = get_token();
-	}
+	//while(t.kind != 'q'){
+	//	tokens.push_back(t);
+	//	t = get_token();
+	//}
 	for(Token tok: tokens){
 		cout << "Token kind = " << tok.kind << "; val = " << tok.value << '\n';
 	}
