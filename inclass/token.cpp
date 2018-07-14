@@ -12,7 +12,7 @@ vector<Token> tokens;
 
 int main(){
 	Token t = get_token();
-	for (Token t = get_token(); t.kind != 'q'; t = get_token)
+	for (Token t = get_token(); t.kind != 'q'; t = get_token())
 		tokens.push_back(t);
 	//while(t.kind != 'q'){
 	//	tokens.push_back(t);
