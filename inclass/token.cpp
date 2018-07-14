@@ -19,7 +19,12 @@ int main(){
 	//	t = get_token();
 	//}
 	for(Token tok: tokens){
-		cout << "Token kind = " << tok.kind << "; val = " << tok.value << '\n';
+		if (tok.kind = '8')
+			cout << "A number token with val = " << tok.val << '\n';
+		else if (tok.kind = 'N')
+			cout << "We received an invalid token of value " << tok.kind << '\n';
+		else
+			cout << "A token of kind " << tok.kind << '\n';
 	}
 }
 
@@ -45,6 +50,8 @@ Token get_token(){
 			cin >> val;
 			return Token{'8', val};
 		}
+		default:
+			return Token{'N'};
 
 	}
 }
