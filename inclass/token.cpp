@@ -20,7 +20,7 @@ int main(){
 	//}
 	for(Token tok: tokens){
 		if (tok.kind = '8')
-			cout << "A number token with val = " << tok.val << '\n';
+			cout << "A number token with val = " << tok.value << '\n';
 		else if (tok.kind = 'N')
 			cout << "We received an invalid token of value " << tok.kind << '\n';
 		else
