@@ -43,10 +43,10 @@ Token Token_stream::get(){
 }
 
 void Token_stream::ignore(){
-	
+
 }
 
-Token_stream ts;
+
 
 double expression(){
 	double left = term();
@@ -80,6 +80,7 @@ double primary(){
 
 
 int main(){	
+	Token_stream ts;
 	double val = 0.0;
 	while (cin){
 		Token t = ts.get();
