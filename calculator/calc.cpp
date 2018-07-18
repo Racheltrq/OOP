@@ -1,10 +1,10 @@
 #include "std_lib_facilities.h"
 #include "token.h"
-/*
+
 double expression();
 double primary();
 double term();
-/**/
+
 
 
 void Token_stream::putback(Token t){
