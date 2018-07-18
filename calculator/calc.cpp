@@ -49,7 +49,7 @@ void Token_stream::ignore(){
 
 
 double expression(Token_stream& ts){
-	double left = term();
+	double left = term(ts);
 	Token t = ts.get();
 	while(true){
 		switch(t.kind){
@@ -70,7 +70,7 @@ double expression(Token_stream& ts){
 }
 
 double term(Token_stream& ts){
-	return primary();
+	return primary(ts);
 }
 
 double primary(Token_stream& ts){
