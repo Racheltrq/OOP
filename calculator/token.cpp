@@ -1,24 +1,22 @@
 #include "std_lib_facilities.h"
 #include "token.h"
 
-Token get_token();
+double expression();
+double primary();
+double term();
 
-vector<Token> tokens;
 
-int main(){
-	for (Token t = get_token(); t.kind != 'q'; t = get_token())
-		tokens.push_back(t);
-	for(Token tok: tokens){
-		if (tok.kind == '8')
-			cout << "A number token with val = " << tok.value << '\n';
-		else if (tok.kind == 'N')
-			cout << "We received an invalid token of value " << tok.kind << '\n';
-		else
-			cout << "A token of kind " << tok.kind << '\n';
-	}
+
+void Token_stream::putback(Token t){
+	buffer = t;
+	full = true;
 }
 
-Token get_token(){
+Token Token_stream::get(){
+	if (full){
+		full = false;
+		return buffer;
+	}
 	char ch;
 	cin >> ch;
 	switch(ch){
@@ -40,8 +38,58 @@ Token get_token(){
 			cin >> val;
 			return Token{'8', val};
 		}
-		default:
-			return Token{'N'};
 
 	}
 }
+
+void Token_stream::ignore(){
+	
+}
+
+Token_stream ts;
+
+double expression(){
+	double left = term();
+	Token t = ts.get();
+	while(true){
+		switch(t.kind){
+			case '+':
+
+				left = left + term();
+				break;
+			case '-':
+				left = left - term();				
+				break;
+			default:
+				ts.putback(t);
+				return left;
+		}
+		t = ts.get();
+		
+	}
+}
+
+double term(){
+	return primary();
+}
+
+double primary(){
+	Token t = ts.get();
+	return t.value;
+}
+
+
+int main(){	
+	double val = 0.0;
+	while (cin){
+		Token t = ts.get();
+		cout << "Got token: " << t.kind << " with val of " << t.value << '\n';
+		if(t.kind == 'q') break;
+		if(t.kind == ';') cout << " = " << val << '\n';
+			else ts.putback(t);
+		val = expression();
+	}
+	cout << "\nCALCULATOR TERMINATED\n";
+	return 0;
+}
+
