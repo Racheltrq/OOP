@@ -1,10 +1,5 @@
 #include "std_lib_facilities.h"
-
-class Token{
-	public:
-		char kind;
-		double value;
-};
+#include "token.h"
 
 Token get_token();
 
