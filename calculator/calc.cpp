@@ -1,22 +1,11 @@
 #include "std_lib_facilities.h"
+#include "token.h"
+
 double expression();
 double primary();
 double term();
 
-class Token{
-	public:
-		char kind;
-		double value;
-};
 
-class Token_stream{
-	public:
-		Token get();
-		void putback(Token t);
-	private:
-		bool full{false};
-		Token buffer;
-};
 
 void Token_stream::putback(Token t){
 	buffer = t;
@@ -53,10 +42,13 @@ Token Token_stream::get(){
 	}
 }
 
+void Token_stream::ignore(){
 
-Token_stream ts;
+}
 
-double expression(){
+
+
+double expression(Token_stream& ts){
 	double left = term();
 	Token t = ts.get();
 	while(true){
@@ -77,17 +69,18 @@ double expression(){
 	}
 }
 
-double term(){
+double term(Token_stream& ts){
 	return primary();
 }
 
-double primary(){
+double primary(Token_stream& ts){
 	Token t = ts.get();
 	return t.value;
 }
 
 
 int main(){	
+	Token_stream ts;
 	double val = 0.0;
 	while (cin){
 		Token t = ts.get();
@@ -95,8 +88,7 @@ int main(){
 		if(t.kind == 'q') break;
 		if(t.kind == ';') cout << " = " << val << '\n';
 			else ts.putback(t);
-		val = expression();
-		cout << "Done";
+		val = expression(ts);
 	}
 	cout << "\nCALCULATOR TERMINATED\n";
 	return 0;
