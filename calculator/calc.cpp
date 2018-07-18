@@ -41,11 +41,11 @@ Token Token_stream::get(){
 
 	}
 }
-
+/*
 void Token_stream::ignore(){
 
 }
-
+/**/
 
 
 double expression(Token_stream& ts){
