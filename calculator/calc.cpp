@@ -55,10 +55,10 @@ double expression(Token_stream& ts){
 		switch(t.kind){
 			case '+':
 
-				left = left + term();
+				left = left + term(ts);
 				break;
 			case '-':
-				left = left - term();				
+				left = left - term(ts);				
 				break;
 			default:
 				ts.putback(t);
