@@ -4,7 +4,7 @@
 Token get_token();
 
 vector<Token> tokens;
-'''
+/*
 int main(){
 	for (Token t = get_token(); t.kind != 'q'; t = get_token())
 		tokens.push_back(t);
@@ -17,7 +17,7 @@ int main(){
 			cout << "A token of kind " << tok.kind << '\n';
 	}
 }
-'''
+/**/
 Token get_token(){
 	char ch;
 	cin >> ch;
