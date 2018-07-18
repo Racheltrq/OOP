@@ -48,7 +48,7 @@ void Token_stream::ignore(){
 
 
 
-double expression(){
+double expression(Token_stream ts){
 	double left = term();
 	Token t = ts.get();
 	while(true){
@@ -69,11 +69,11 @@ double expression(){
 	}
 }
 
-double term(){
+double term(Token_stream ts){
 	return primary();
 }
 
-double primary(){
+double primary(Token_stream ts){
 	Token t = ts.get();
 	return t.value;
 }
@@ -88,7 +88,7 @@ int main(){
 		if(t.kind == 'q') break;
 		if(t.kind == ';') cout << " = " << val << '\n';
 			else ts.putback(t);
-		val = expression();
+		val = expression(ts);
 	}
 	cout << "\nCALCULATOR TERMINATED\n";
 	return 0;
