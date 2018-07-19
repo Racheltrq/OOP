@@ -87,8 +87,8 @@ double term(Token_stream& ts){
 			{
 				double temp = primary(ts);
 				if(temp == 0) error("Divide by zero.");
-				
-				left = left % temp;
+
+				left = fmod(left, temp);
 				break;
 			}
 			default:
