@@ -78,12 +78,12 @@ double term(Token_stream& ts){
 				break;
 			case '/':
 				double temp = primary(ts);
-				if(temp == 0) error('Divide by zero.');
+				if(temp == 0) error("Divide by zero.");
 				left /= temp;
 				break;
 			case '%':
 				double temp = primary(ts);
-				if(temp == 0) error('Divide by zero.');
+				if(temp == 0) error("Divide by zero.");
 				left = fmod(left, temp);
 
 				break;
@@ -101,7 +101,7 @@ double primary(Token_stream& ts){
 		case '(':
 			double expr = expression(ts);
 			t = ts.get();
-			if(t.kind != ')') error(') expected');
+			if(t.kind != ')') error(") expected");
 			return expr;
 		case number:
 			return t.value;
@@ -110,7 +110,7 @@ double primary(Token_stream& ts){
 		case '-':
 			return -primary(ts);
 		default:
-			error('primary expected');
+			error("primary expected");
 	}
 	t = ts.get();
 }
