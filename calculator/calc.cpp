@@ -118,6 +118,23 @@ double primary(Token_stream& ts){
 				return -primary(ts);
 			case 'q':
 				error("program ends");
+			case '*':
+				left *= primary(ts);
+				break;
+			case '/':
+			{
+				double temp = primary(ts);
+				if(temp == 0) error("Divide by zero.");
+				left /= temp;
+				break;
+			}
+			case '%':
+			{
+				double temp = primary(ts);
+				if(temp == 0) error("Divide by zero.");
+				left = left % temp;
+				break;
+			}
 			default:
 				error("primary expected");
 		}
