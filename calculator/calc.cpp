@@ -95,18 +95,20 @@ double term(Token_stream& ts){
 				ts.putback(t);
 				return left;
 		}
-		t = ts.get();
+	t = ts.get();
 	}
 }
 
 double primary(Token_stream& ts){
 	Token t = ts.get();
 	while(true){
-		//cout <<"token kind: " << t.kind;
+		cout <<"token kind: " << t.kind;
 		switch(t.kind){
 			case '(':
 			{
+				cout << "evaluate expression";
 				double expr = expression(ts);
+				cout << "Done";
 				t = ts.get();
 				if(t.kind != ')') error(") expected");
 				return expr;
