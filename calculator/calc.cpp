@@ -101,6 +101,7 @@ double term(Token_stream& ts){
 double primary(Token_stream& ts){
 	Token t = ts.get();
 	switch(t.kind){
+		cout <<"token kind: " << t.kind;
 		case '(':
 		{
 			double expr = expression(ts);
