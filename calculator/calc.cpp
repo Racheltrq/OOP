@@ -77,16 +77,19 @@ double term(Token_stream& ts){
 				left *= primary(ts);
 				break;
 			case '/':
-				double a = primary(ts);
-				if(a == 0) error("Divide by zero.");
-				left /= a;
+			{
+				double temp = primary(ts);
+				if(temp == 0) error("Divide by zero.");
+				left /= temp;
 				break;
+			}
 			case '%':
-				double b = primary(ts);
-				if(b == 0) error("Divide by zero.");
-				left = fmod(left, b);
-
+			{
+				double temp = primary(ts);
+				if(temp == 0) error("Divide by zero.");
+				left = fmod(left, temp);
 				break;
+			}
 			default:
 				ts.putback(t);
 				return left;
@@ -99,10 +102,12 @@ double primary(Token_stream& ts){
 	Token t = ts.get();
 	switch(t.kind){
 		case '(':
+		{
 			double expr = expression(ts);
 			t = ts.get();
 			if(t.kind != ')') error(") expected");
 			return expr;
+		}
 		case number:
 			return t.value;
 		case '+':
