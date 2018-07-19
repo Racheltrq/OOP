@@ -100,27 +100,29 @@ double term(Token_stream& ts){
 
 double primary(Token_stream& ts){
 	Token t = ts.get();
-	switch(t.kind){
-		cout <<"token kind: " << t.kind;
-		case '(':
-		{
-			double expr = expression(ts);
-			t = ts.get();
-			if(t.kind != ')') error(") expected");
-			return expr;
-		}
-		case '8':
-			return t.value;
-		case '+':
-			return primary(ts);
-		case '-':
-			return -primary(ts);
-		default:
-			error("primary expected");
-	}
-	t = ts.get();
-}
+	while(true){
+		//cout <<"token kind: " << t.kind;
+		switch(t.kind){
+			case '(':
+			{
+				double expr = expression(ts);
+				t = ts.get();
+				if(t.kind != ')') error(") expected");
+				return expr;
+			}
+			case '8':
+				return t.value;
+			case '+':
+				return primary(ts);
+			case '-':
+				return -primary(ts);
 
+			default:
+				error("primary expected");
+		}
+	t = ts.get();
+	}
+}
 
 int main(){	
 	Token_stream ts;
