@@ -54,7 +54,6 @@ double expression(Token_stream& ts){
 	while(true){
 		switch(t.kind){
 			case '+':
-
 				left = left + term(ts);
 				break;
 			case '-':
@@ -70,12 +69,50 @@ double expression(Token_stream& ts){
 }
 
 double term(Token_stream& ts){
-	return primary(ts);
+	double left = primary(ts);
+	Token t = ts.get();
+	while (true){
+		switch(t.kind){
+			case '*':
+				left *= primary(ts);
+				break;
+			case '/':
+				double temp = primary(ts);
+				if(temp == 0) error('Divide by zero.');
+				left /= temp;
+				break;
+			case '%':
+				double temp = primary(ts);
+				if(temp == 0) error('Divide by zero.');
+				left = fmod(left, temp);
+
+				break;
+			default:
+				ts.putback(t);
+				return left;
+		}
+		t = ts.get();
+	}
 }
 
 double primary(Token_stream& ts){
 	Token t = ts.get();
-	return t.value;
+	switch(t.kind){
+		case '(':
+			double expr = expression(ts);
+			t = ts.get();
+			if(t.kind != ')') error(') expected');
+			return expr;
+		case number:
+			return t.value;
+		case '+':
+			return primary(ts);
+		case '-':
+			return -primary(ts);
+		default:
+			error('primary expected');
+	}
+	t = ts.get();
 }
 
 
