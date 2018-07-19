@@ -77,14 +77,14 @@ double term(Token_stream& ts){
 				left *= primary(ts);
 				break;
 			case '/':
-				double temp = primary(ts);
-				if(temp == 0) error("Divide by zero.");
-				left /= temp;
+				double a = primary(ts);
+				if(a == 0) error("Divide by zero.");
+				left /= a;
 				break;
 			case '%':
-				double temp = primary(ts);
-				if(temp == 0) error("Divide by zero.");
-				left = fmod(left, temp);
+				double b = primary(ts);
+				if(b == 0) error("Divide by zero.");
+				left = fmod(left, b);
 
 				break;
 			default:
