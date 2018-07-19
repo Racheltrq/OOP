@@ -102,7 +102,7 @@ double term(Token_stream& ts){
 double primary(Token_stream& ts){
 	Token t = ts.get();
 	while(true){
-		cout <<"token kind: " << t.kind;
+		cout <<"token kind: " << t.kind, "token value: " << t.value;
 		switch(t.kind){
 			case '(':
 			{
