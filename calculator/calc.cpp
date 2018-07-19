@@ -108,7 +108,7 @@ double primary(Token_stream& ts){
 			if(t.kind != ')') error(") expected");
 			return expr;
 		}
-		case number:
+		case '8':
 			return t.value;
 		case '+':
 			return primary(ts);
