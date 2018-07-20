@@ -6,5 +6,6 @@ int main(){
 
 	//cout << "Today: " << today.y << "/" << today.m << "/" 
 	//	<< today.d << "\n";
+	cout << today.month() << endl;
 	return 0;
 }
