@@ -4,7 +4,7 @@
 int main(){
 	Date today{2018, 7, 20};
 
-	cout << "Today: " << today.y << "/" << today.m << "/" 
-		<< today.d << "\n";
+	//cout << "Today: " << today.y << "/" << today.m << "/" 
+	//	<< today.d << "\n";
 	return 0;
 }
