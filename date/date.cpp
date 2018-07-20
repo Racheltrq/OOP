@@ -9,6 +9,12 @@ Date::Date(int yy, int mm, int dd)
 	}
 }
 
+void Date::add_year(int n){
+}
+
+void Date::add_month(int n){
+}
+
 void Date::add_day(int n){
 }
 
