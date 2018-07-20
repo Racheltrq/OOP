@@ -2,10 +2,8 @@
 #include "date.h"
 
 int main(){
-	Date today;
-	today.y = 2018;
-	today.m = 7;
-	today.d = 20;
+	Date today{2018, 7, 20};
+
 	cout << "Today: " << today.y << "/" << today.m << "/" 
 		<< today.d << "\n";
 	return 0;
