@@ -5,7 +5,7 @@ Date::Date(int yy, int mm, int dd)
 :y{yy}, m{mm}, d{dd}
 {
 	if(!isvalid()){
-		throw Invalid{};
+		throw invalid_argument("Invalid month.");
 	}
 }
 
@@ -17,6 +17,6 @@ int Date::month(){
 }
 
 bool Date::isvalid(){
-	if((int m < 1) || int m > 12) return false;
+	if((m < 1) || (m > 12)) return false;
 	else return true;
 }
