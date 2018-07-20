@@ -13,7 +13,7 @@ void Date::add_day(int n){
 }
 
 int Date::year(){
-
+	return y;
 }
 
 int Date::month(){
@@ -21,7 +21,7 @@ int Date::month(){
 }
 
 int Date::day(){
-
+	return d;
 }
 
 bool Date::isvalid(){

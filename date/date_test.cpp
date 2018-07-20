@@ -3,9 +3,7 @@
 
 int main(){
 	Date today{2018, 11, 20};
-
-	//cout << "Today: " << today.y << "/" << today.m << "/" 
-	//	<< today.d << "\n";
-	cout << today.month() << endl;
+	cout << "Today: " << today.year() << "/" << today.month() << "/" 
+		<< today.day() << endl;
 	return 0;
 }
