@@ -3,6 +3,6 @@
 
 int main(){
 	Date today;
-	cout << "Today: " << today.y << "/" << today.m << "/" << today.d;
+	cout << "Today: " << today.y << "/" << today.m << "/" << today.d << "\n";
 	return 0;
 }
