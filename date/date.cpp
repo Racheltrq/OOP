@@ -12,8 +12,16 @@ Date::Date(int yy, int mm, int dd)
 void Date::add_day(int n){
 }
 
+int Date::year(){
+
+}
+
 int Date::month(){
 	return m;
+}
+
+int Date::day(){
+
 }
 
 bool Date::isvalid(){
