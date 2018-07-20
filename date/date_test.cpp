@@ -2,7 +2,7 @@
 #include "date.h"
 
 int main(){
-	Date today{2018, 15, 20};
+	Date today{2018, 11, 20};
 
 	//cout << "Today: " << today.y << "/" << today.m << "/" 
 	//	<< today.d << "\n";
