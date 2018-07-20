@@ -4,6 +4,9 @@
 Date::Date(int yy, int mm, int dd)
 :y{yy}, m{mm}, d{dd}
 {
+	if(!isvalid()){
+		throw Invalid{};
+	}
 }
 
 void Date::add_day(int n){
@@ -11,4 +14,9 @@ void Date::add_day(int n){
 
 int Date::month(){
 	return m;
+}
+
+bool Date::isvalid(){
+	if((int m < 1) || int m > 12) return false;
+	else return true;
 }
