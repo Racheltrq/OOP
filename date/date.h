@@ -4,7 +4,7 @@ class Date{
 		void add_day(int n);
 		void add_month(int n);
 		void add_year(int n);
-		int Date::add_month();
+		int month();
 	private:
 		int y;
 		int m;
