@@ -1,9 +1,14 @@
-class variable{
-	public:
-		string name;
-		double value;
-};
+#include "std_lib_lib_facilities.h"
+#include "vars.h"
 
-double get_value(string s);
-void set_value(string s, double d);
-void print_vars();
+int main(){
+	set_value("a", 10.0);
+	set_value("abc", 1.11);
+
+
+	double d;
+	d = get_value("a");
+	cout << "a = " << d << endl;
+	d = get_value("abc");
+	cout << "abc = " << d = endl;
+}
