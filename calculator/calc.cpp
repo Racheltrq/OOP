@@ -119,10 +119,10 @@ int main(){
 	Token_stream ts;
 
 	while (cin){
-		cout << "<";
+		cout << ">";
 		Token t = ts.get();
 		while(t.kind == print) t = ts.get();
-		if (t.kind == quit) return 0;
+		if (t.kind == quit) break;
 
 		ts.putback(t);
 		cout << "=" << statement(ts) << '\n';
