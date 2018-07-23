@@ -125,7 +125,7 @@ int main(){
 		Token t = ts.get();
 		while(t.kind == print) t = ts.get();
 		if (t.kind == quit) break;
-
+		cout << "!";
 		ts.putback(t);
 		cout << "=" << statement(ts) << '\n';
 	}
