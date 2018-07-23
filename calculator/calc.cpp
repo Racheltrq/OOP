@@ -121,7 +121,7 @@ int main(){
 	Token_stream ts;
 
 	while (cin){
-		cout << ">";
+		cout << "> ";
 		Token t = ts.get();
 		while(t.kind == print) t = ts.get();
 		if (t.kind == quit) break;

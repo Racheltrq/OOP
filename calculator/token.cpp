@@ -1,20 +1,6 @@
 #include "std_lib_facilities.h"
 #include "token.h"
 
-/* comment for testing
-int main(){
-	for (Token t = get_token(); t.kind != 'q'; t = get_token())
-		tokens.push_back(t);
-	for(Token tok: tokens){
-		if (tok.kind == '8')
-			cout << "A number token with val = " << tok.value << '\n';
-		else if (tok.kind == 'N')
-			cout << "We received an invalid token of value " << tok.kind << '\n';
-		else
-			cout << "A token of kind " << tok.kind << '\n';
-	}
-}
-*/
 void Token_stream::putback(Token t){
 	buffer.push_back(t);
 }
