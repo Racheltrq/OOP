@@ -4,7 +4,7 @@
 int main(){
 	token_stream ts;
 	while(cin){
-		t = ts.get();
+		token t = ts.get();
 		cout << t.kind << " " << t.val;
 		ts.putback(t);
 	};
