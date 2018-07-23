@@ -12,9 +12,9 @@ class token_stream{
 		token get();
 		token popback();
 		void putback();
-		token(char ch): kind{ch}{};
-		token(char ch, double v): kind{ch}{}, val{v}{};
-		token(char ch, string n): kind{ch}{}, name{n}{};
+		token(char ch): kind{ch}{}
+		token(char ch, double v): kind{ch}{}, val{v}{}
+		token(char ch, string n): kind{ch}{}, name{n}{}
 	private:
 		vector<token> buffer;
 };
