@@ -7,7 +7,7 @@ double primary(Token_stream& ts);
 double term(Token_stream& ts);
 
 
-/*
+
 double statement(Token_stream& ts){
 	Token t = ts.get();
 	if(t.kind == name){
@@ -30,7 +30,7 @@ double statement(Token_stream& ts){
 	ts.putback(t);
 	return expression(ts);
 }
-*/
+
 double expression(Token_stream& ts){
 	double left = term(ts);
 	Token t = ts.get();
@@ -114,7 +114,7 @@ double primary(Token_stream& ts){
 	t = ts.get();
 	}
 }
-/*
+
 int main(){	
 	Token_stream ts;
 	
@@ -131,7 +131,4 @@ int main(){
 	return 0;
 }
 
-*/
-int main(){
-	
-}
+
