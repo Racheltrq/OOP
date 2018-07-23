@@ -1,10 +1,7 @@
 #include "std_lib_facilities.h"
 #include "token.h"
 
-Token get_token();
-
-vector<Token> tokens;
-
+/* comment for testing
 int main(){
 	for (Token t = get_token(); t.kind != 'q'; t = get_token())
 		tokens.push_back(t);
@@ -17,8 +14,17 @@ int main(){
 			cout << "A token of kind " << tok.kind << '\n';
 	}
 }
+*/
+void Token_stream::putback(Token t){
+	buffer = t;
+	full = true;
+}
 
-Token get_token(){
+Token Token_stream::get(){
+	if (full){
+		full = false;
+		return buffer;
+	}
 	char ch;
 	cin >> ch;
 	switch(ch){
@@ -30,7 +36,6 @@ Token get_token(){
 		case '-':
 		case '*':
 		case '/':
-		case '=':
 		case mod:
 		case power:
 		return Token{ch};
@@ -44,8 +49,16 @@ Token get_token(){
 			return Token{'8', val};
 		}
 		default:
-			return Token{'N'};
+			if(isalpha(ch)){
+				string s;
+				s += ch;
+				while(cin.get(ch) && (isalpha(ch) || isdigit(ch)))
+					s += ch;
+				cin.putback(ch);
+				return Token{name, s};
 
+			}
+			return Token{invalid, double(ch)};
 	}
+	return Token{quit};
 }
-
