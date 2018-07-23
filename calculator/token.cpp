@@ -45,8 +45,9 @@ Token Token_stream::get(){
 			cin.putback(ch);
 			double val;
 			cin >> val;
-			return Token{'8', val};
+			return Token{number, val};
 		}
+		/*
 		default:
 			if(isalpha(ch)){
 				string s;
@@ -57,7 +58,9 @@ Token Token_stream::get(){
 				return Token{name, s};
 
 			}
+
 			return Token{invalid, double(ch)};
+		*/
 	}
 	return Token{quit};
 }

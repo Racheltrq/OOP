@@ -6,12 +6,8 @@ double expression(Token_stream& ts);
 double primary(Token_stream& ts);
 double term(Token_stream& ts);
 
+
 /*
-void Token_stream::ignore(){
-
-}
-*/
-
 double statement(Token_stream& ts){
 	Token t = ts.get();
 	if(t.kind == name){
@@ -34,7 +30,7 @@ double statement(Token_stream& ts){
 	ts.putback(t);
 	return expression(ts);
 }
-
+*/
 double expression(Token_stream& ts){
 	double left = term(ts);
 	Token t = ts.get();
@@ -137,5 +133,5 @@ int main(){
 
 */
 int main(){
-	
+
 }
