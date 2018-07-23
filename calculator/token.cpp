@@ -19,6 +19,11 @@ void Token_stream::putback(Token t){
 	buffer.push_back(t);
 }
 
+Token Token_stream::popback(){
+	Token t = buffer.back();
+	return t;
+}
+
 Token Token_stream::get(){
 	if (buffer.size() > 0){
 		Token t = popback();
