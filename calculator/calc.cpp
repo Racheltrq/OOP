@@ -114,13 +114,8 @@ double primary(Token_stream& ts){
 	t = ts.get();
 	}
 }
-<<<<<<< HEAD
-/*
-int main(){
-=======
 
-int main(){	
->>>>>>> ae258a5bdeb4c9842bcf2bfe9e01690a48fa305b
+int main(){
 	Token_stream ts;
 
 	while (cin){
@@ -135,12 +130,4 @@ int main(){
 	cout << "\nCALCULATOR TERMINATED\n";
 	return 0;
 }
-<<<<<<< HEAD
-*/
-int main(){
-	
-}
-=======
 
-
->>>>>>> ae258a5bdeb4c9842bcf2bfe9e01690a48fa305b
