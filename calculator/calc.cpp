@@ -132,3 +132,6 @@ int main(){
 }
 
 */
+int main(){
+	
+}
