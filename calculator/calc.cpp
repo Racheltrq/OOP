@@ -12,21 +12,24 @@ double statement(Token_stream& ts){
 	Token t = ts.get();
 	if(t.kind == name){
 		Token var = t;
-		cout << "A var with a name " << var.name << endl;
+//		cout << "A var with a name " << var.name << endl;
 		t = ts.get();
 		if(t.kind == '='){
+//            cout << "SET VAR STATEMENT\n";
 			double d = expression(ts);
 			set_value(var.name, d);
 			return d;
-		}
-		else if(t.kind == print){
+		}else if(t.kind == print){
+//            cout << "GET VAR STATEMENT\n";
 			ts.putback(t);
 			return get_value(var.name);
 		}
-		ts.putback(t);
-		ts.putback(var);
+//		ts.putback(t);
+//		ts.putback(var);
+//        cout << "unspecified variable operation \n";
 		return expression(ts);
 	}
+//    cout << "NON VARIABLE STATEMENT\n";
 	ts.putback(t);
 	return expression(ts);
 }
@@ -124,7 +127,7 @@ int main(){
 		cout << "> ";
 		Token t = ts.get();
 		while(t.kind == print) t = ts.get();
-		if (t.kind == quit) break;
+		if (t.kind == quit) return 0;
 		
 		ts.putback(t);
 		cout << "=" << statement(ts) << '\n';

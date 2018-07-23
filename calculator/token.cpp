@@ -7,6 +7,7 @@ void Token_stream::putback(Token t){
 
 Token Token_stream::popback(){
 	Token t = buffer.back();
+    buffer.pop_back();
 	return t;
 }
 
@@ -26,6 +27,7 @@ Token Token_stream::get(){
 		case '-':
 		case '*':
 		case '/':
+        case '=':
 		case mod:
 		case power:
 		return Token{ch};

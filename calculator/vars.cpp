@@ -10,15 +10,18 @@ double get_value(string s){
 }
 
 void set_value(string s, double d){
-	for(variable& var: var_table)
+	for(variable& var: var_table){
 		if(var.name == s){
 			var.value = d;
 			return;
 		}
+    }
 	var_table.push_back(variable{s, d});
+//    cout << "variable created.\n";
 }
 
 void print_vars(){
 	for(variable var: var_table)
 		cout << "Var " << var.name << " = " << var.value << endl;
+//    cout << "End Var Table print." << endl;
 }
