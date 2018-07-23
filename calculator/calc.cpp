@@ -121,15 +121,34 @@ double expression(Token_stream& ts);
 double primary(Token_stream& ts);
 double term(Token_stream& ts);
 
-
-
-
 /*
 void Token_stream::ignore(){
 
 }
 */
 
+double statement(Token_stream& ts){
+	Token t = ts.get();
+	if(t.kind == name){
+		Token var = t;
+		cout << "A var with a name " << var.name << endl; 
+		t = ts.get();
+		if(t.kind == '='){
+			double d = expression(ts);
+			set_value(var.name, d);
+			return d;
+		}
+		else if(t.kind == print){
+			ts.putback(t);
+			return get_value(var.name);
+		}
+		ts.putback(t);
+		ts.putback(var);
+		return expression(ts);
+	}
+	ts.putback(t);
+	return expression(ts);
+}
 
 double expression(Token_stream& ts){
 	double left = term(ts);
@@ -217,14 +236,15 @@ double primary(Token_stream& ts){
 
 int main(){	
 	Token_stream ts;
-	double val = 0.0;
+	
 	while (cin){
+		cout << "<";
 		Token t = ts.get();
-		cout << "Got token: " << t.kind << " with val of " << t.value << '\n';
-		if(t.kind == 'q') break;
-		if(t.kind == ';') cout << " = " << val << '\n';
-			else ts.putback(t);
-		val = expression(ts);
+		while(t.kind == print) t = ts.get();
+		if (t.kind == quit) return;
+
+		ts.putback(t);
+		cout << result << statement(ts) << '\n';
 	}
 	cout << "\nCALCULATOR TERMINATED\n";
 	return 0;

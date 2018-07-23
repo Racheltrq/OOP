@@ -81,14 +81,13 @@ int main(){
 }
 */
 void Token_stream::putback(Token t){
-	buffer = t;
-	full = true;
+	buffer.push_back(t);
 }
 
 Token Token_stream::get(){
-	if (full){
-		full = false;
-		return buffer;
+	if (buffer.size() > 0){
+		Token t = popback();
+		return t;
 	}
 	char ch;
 	cin >> ch;

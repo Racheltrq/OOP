@@ -22,6 +22,5 @@ class Token_stream{
 		void putback(Token t);
 		Token popback();
 	private:
-		bool full{false};
-		Token buffer;
+		vector<Token> buffer;
 };
