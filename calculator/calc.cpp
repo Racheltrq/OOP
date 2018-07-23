@@ -132,6 +132,3 @@ int main(){
 }
 
 */
-int main(){
-
-}
