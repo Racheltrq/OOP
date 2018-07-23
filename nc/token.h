@@ -5,7 +5,7 @@ class token{
 		char kind;
 		double val;
 		string name;
-}
+};
 
 class token_stream{
 	public:
@@ -17,5 +17,5 @@ class token_stream{
 		Token(char ch, string n): kind{ch}{}, name{n}{};
 	private:
 		vector<Token> buffer;
-}
+};
 
