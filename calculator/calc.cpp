@@ -122,7 +122,7 @@ int main(){
 		cout << "<";
 		Token t = ts.get();
 		while(t.kind == print) t = ts.get();
-		if (t.kind == quit) return;
+		if (t.kind == quit) return 0;
 
 		ts.putback(t);
 		cout << "=" << statement(ts) << '\n';
