@@ -4,7 +4,7 @@
 Token get_token();
 
 vector<Token> tokens;
-/*
+/* comment for testing
 int main(){
 	for (Token t = get_token(); t.kind != 'q'; t = get_token())
 		tokens.push_back(t);
