@@ -118,7 +118,7 @@ double primary(Token_stream& ts){
 	t = ts.get();
 	}
 }
-
+/*
 int main(){	
 	Token_stream ts;
 	
@@ -135,3 +135,7 @@ int main(){
 	return 0;
 }
 
+*/
+int main(){
+	
+}
