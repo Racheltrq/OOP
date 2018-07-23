@@ -34,11 +34,15 @@ Token token_stream::get(){
 			return Token{'n', a};
 		}
 		default: // is var
-
+			return 0;
 	}
 
 }
 
 Token token_stream::popback(){
+	return buffter.pop_back()
+}
 
+void token_stream::putback(token t){
+	buffer.push_back(t);
 }
