@@ -1,4 +1,4 @@
-#include "std_lib_facilities.h"
+
 const char invalid = 'i';
 const char name = 'a';
 const char number = '8';
