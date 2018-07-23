@@ -10,5 +10,5 @@ int main(){
 	d = get_value("a");
 	cout << "a = " << d << endl;
 	d = get_value("abc");
-	cout << "abc = " << d = endl;
+	cout << "abc = " << d << endl;
 }
