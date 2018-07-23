@@ -1,7 +1,7 @@
 #include "std_lib_facilities.h"
 #include "token.h"
 
-Token token_stream::get(){
+token token_stream::get(){
 	while(buffer.size() > 0) return buffer.pop_back();
 	char ch;
 	cin >> ch;
@@ -15,7 +15,7 @@ Token token_stream::get(){
 		case ')':
 		case ';':
 		case '^':
-			return Token{ch};
+			return token{ch};
 		case '1':
 		case '2':
 		case '3':
@@ -31,7 +31,7 @@ Token token_stream::get(){
 			cin.putback(ch);
 			double a;
 			cin >> a;
-			return Token{'n', a};
+			return token{'n', a};
 		}
 		default: // is var
 			return 0;
@@ -39,7 +39,7 @@ Token token_stream::get(){
 
 }
 
-Token token_stream::popback(){
+token token_stream::popback(){
 	return buffter.pop_back()
 }
 
