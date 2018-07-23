@@ -105,6 +105,8 @@ double primary(Token_stream& ts){
 				return primary(ts);
 			case '-':
 				return -primary(ts);
+			case name:
+				return name;
 			case 'q':
 				error("program ends");
 
