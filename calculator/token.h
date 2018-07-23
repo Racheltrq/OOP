@@ -10,12 +10,17 @@ class Token{
 	public:
 		char kind;
 		double value;
-};
+		string name;
+		Token(char ch): kind{ch} {}
+		Token(char ch, double val): kind{ch}, value{val}{}
+		Token(char ch, string name): kind{ch}, name{n}{}
+	};
 
 class Token_stream{
 	public:
 		Token get();
 		void putback(Token t);
+		Token popback();
 	private:
 		bool full{false};
 		Token buffer;
