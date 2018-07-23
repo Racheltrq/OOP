@@ -125,7 +125,7 @@ int main(){
 		if (t.kind == quit) return;
 
 		ts.putback(t);
-		cout << result << statement(ts) << '\n';
+		cout << "=" << statement(ts) << '\n';
 	}
 	cout << "\nCALCULATOR TERMINATED\n";
 	return 0;
