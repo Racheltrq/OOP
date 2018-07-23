@@ -22,14 +22,14 @@ double expression(Token_stream& ts){
 				left = left + term(ts);
 				break;
 			case '-':
-				left = left - term(ts);				
+				left = left - term(ts);
 				break;
 			default:
 				ts.putback(t);
 				return left;
 		}
 		t = ts.get();
-		
+
 	}
 }
 
@@ -97,7 +97,7 @@ double primary(Token_stream& ts){
 	}
 }
 
-int main(){	
+int main(){
 	Token_stream ts;
 	double val = 0.0;
 	while (cin){
@@ -131,7 +131,7 @@ double statement(Token_stream& ts){
 	Token t = ts.get();
 	if(t.kind == name){
 		Token var = t;
-		cout << "A var with a name " << var.name << endl; 
+		cout << "A var with a name " << var.name << endl;
 		t = ts.get();
 		if(t.kind == '='){
 			double d = expression(ts);
@@ -159,14 +159,14 @@ double expression(Token_stream& ts){
 				left = left + term(ts);
 				break;
 			case '-':
-				left = left - term(ts);				
+				left = left - term(ts);
 				break;
 			default:
 				ts.putback(t);
 				return left;
 		}
 		t = ts.get();
-		
+
 	}
 }
 
@@ -234,9 +234,9 @@ double primary(Token_stream& ts){
 	}
 }
 /*
-int main(){	
+int main(){
 	Token_stream ts;
-	
+
 	while (cin){
 		cout << "<";
 		Token t = ts.get();
@@ -249,12 +249,9 @@ int main(){
 	cout << "\nCALCULATOR TERMINATED\n";
 	return 0;
 }
-
-<<<<<<< HEAD
->>>>>>> 643cd5936f7bd38a98a914f6a5cc8990f95dff64
-=======
 */
+
 int main(){
-	
+
 }
->>>>>>> f29202b3d77c48d28bd427f0edf420947197b906
+
