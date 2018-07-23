@@ -233,7 +233,7 @@ double primary(Token_stream& ts){
 	t = ts.get();
 	}
 }
-
+/*
 int main(){	
 	Token_stream ts;
 	
@@ -250,4 +250,11 @@ int main(){
 	return 0;
 }
 
+<<<<<<< HEAD
 >>>>>>> 643cd5936f7bd38a98a914f6a5cc8990f95dff64
+=======
+*/
+int main(){
+	
+}
+>>>>>>> f29202b3d77c48d28bd427f0edf420947197b906
