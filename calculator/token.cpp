@@ -52,7 +52,7 @@ Token Token_stream::get(){
 			cin >> val;
 			return Token{number, val};
 		}
-		/*
+		
 		default:
 			if(isalpha(ch)){
 				string s;
@@ -65,7 +65,7 @@ Token Token_stream::get(){
 			}
 
 			return Token{invalid, double(ch)};
-		*/
+		
 	}
 	return Token{quit};
 
