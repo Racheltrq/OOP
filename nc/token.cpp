@@ -34,7 +34,7 @@ token token_stream::get(){
 			return token{'n', a};
 		}
 		default: // is var
-			return 0;
+			return token{'q'};
 	}
 
 }
