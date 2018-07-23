@@ -20,5 +20,5 @@ void set_value(string s, double d){
 
 void print_vars(){
 	for(variable var: var_table)
-		cout < "Var " << var.name << " = " << var.value << endl;
+		cout << "Var " << var.name << " = " << var.value << endl;
 }
