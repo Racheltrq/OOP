@@ -17,7 +17,7 @@ int main(){
 			cout << "A token of kind " << tok.kind << '\n';
 	}
 }
-/**/
+*/
 Token get_token(){
 	char ch;
 	cin >> ch;
