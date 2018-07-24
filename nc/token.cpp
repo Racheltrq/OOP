@@ -3,7 +3,9 @@
 
 token token_stream::get(){
 	while(buffer.size() > 0){
-		return buffer.popback();
+		token t = buffer.back();
+		buffer.pop_back();
+		return t;
 	}
 	char ch;
 	cin >> ch;
