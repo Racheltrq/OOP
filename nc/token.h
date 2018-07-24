@@ -5,6 +5,9 @@ class token{
 		char kind;
 		double val;
 		string name;
+		token(char ch): kind{ch}{}
+		token(char ch, double v): kind{ch}, val{v}{}
+		token(char ch, string n): kind{ch}, name{n}{}
 };
 
 class token_stream{
@@ -12,9 +15,7 @@ class token_stream{
 		token get();
 		token popback();
 		void putback(token t);
-		token(char ch): kind{ch}{}
-		token(char ch, double v): kind{ch}, val{v}{}
-		token(char ch, string n): kind{ch}, name{n}{}
+		
 	private:
 		vector<token> buffer;
 };
