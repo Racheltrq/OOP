@@ -6,7 +6,7 @@ int main(){
 	while(cin){
 		token t = ts.get();
 		cout << t.kind << " " << t.val;
-		ts.putback(t);
+		//ts.putback(t);
 	};
 
 }
