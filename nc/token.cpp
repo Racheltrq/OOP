@@ -3,7 +3,7 @@
 
 token token_stream::get(){
 	while(buffer.size() > 0){
-		t = buffer.back();
+		token t = buffer.back();
 		buffer.pop_back();
 		return t;
 	}
