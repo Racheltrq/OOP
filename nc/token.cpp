@@ -40,7 +40,7 @@ token token_stream::get(){
 }
 
 token token_stream::popback(){
-	return buffter.pop_back()
+	return buffer.pop_back()
 }
 
 void token_stream::putback(token t){
