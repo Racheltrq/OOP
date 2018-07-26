@@ -18,7 +18,7 @@ int main(){
 	cout << "please enter the output file name: ";
 	string oname;
 	cin >> oname;
-	ifstream ost {oname};
+	ofstream ost {oname};
 	if(!ost) error("can't open input file", oname);
 
 	vector<reading> temps;
