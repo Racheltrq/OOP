@@ -12,3 +12,7 @@ int main(){
 	cout << today.day() << endl;
 	return 0;
 }
+
+
+//Input a date in format (yyyy,mm,dd)
+//Enter #days to add to your date
