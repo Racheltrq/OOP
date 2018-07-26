@@ -31,6 +31,6 @@ int main(){
 		temps.push_back(reading{a, b, c, d, e});
 	}
 	for (int i = 0; i < temps.size(); i++){
-		ost << "	" << temps[i].c << "	" << temps[i].e << "\n";
+		ost << temps[i].a  << "	" << temps[i].c << "	" << temps[i].e << "\n";
 	}
 }
