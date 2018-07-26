@@ -10,12 +10,18 @@ Date::Date(int yy, int mm, int dd)
 }
 
 void Date::add_year(int n){
+
 }
 
 void Date::add_month(int n){
 }
 
 void Date::add_day(int n){
+	d += n;
+	if(d > vector[m - 1]){
+		m += 1;
+		
+	}
 }
 
 int Date::year(){
