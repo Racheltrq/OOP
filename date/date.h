@@ -13,15 +13,11 @@ class Date{
 		int day();
 		bool isvalid();
 		bool isleap(int y);
+		Month operator++(Month &m);
 	private:
 		int y;
 		Month m;
 		int d;
 };
 
-Month operator++(Month &m){
-	
-	m = (m == Month::dec) ? (Month::jan) : Month(int(m) + 1);
-	return m;
-};
 

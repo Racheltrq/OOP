@@ -44,6 +44,13 @@ int Date::day(){
 	return d;
 }
 
+Month Date::operator++(Month &m){
+	
+	m = (m == Month::dec) ? (Month::jan) : Month(int(m) + 1);
+	return m;
+}
+
+
 bool Date::isvalid(){
 	if((int(m) < 1) || (int(m) > 12)) return false;
 	else return true;
