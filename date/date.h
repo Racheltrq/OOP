@@ -1,4 +1,4 @@
-enum class Month{
+enum Month{
 	jan=1, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec
 }
 
