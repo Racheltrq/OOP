@@ -23,7 +23,8 @@ void Date::add_month(int n){
 
 void Date::add_day(int n){
 	d += n;
-	int numDay = month_days[int(m) - 1];
+	if(isleap(y)) int numDay = month_days[int(m) - 1];
+	else int numDay = leap_month_days[int(m) - 1];
 	while(d > numDay){
 		d -= numDay;
 		m = Month(int(m) + 1);
@@ -45,4 +46,12 @@ int Date::day(){
 bool Date::isvalid(){
 	if((int(m) < 1) || (int(m) > 12)) return false;
 	else return true;
+}
+
+bool Date::isleap(y){
+	if(y % 4 == 0){
+		if(y % 100 == 0) return false;
+		else return true;
+	}
+	else return false;
 }

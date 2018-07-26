@@ -14,6 +14,7 @@ class Date{
 		Month month();
 		int day();
 		bool isvalid();
+		bool isleap(y);
 	private:
 		int y;
 		Month m;
