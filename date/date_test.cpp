@@ -7,7 +7,7 @@ vector<int> leap_month = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 int main(){
 	Month a = Month::jul;
 	Date today{2018, a, 20};
-	cout << "Today: " << today.year() << "/" << today.month() << "/" 
+	cout << "Today: " << today.year() << "/" << a << "/" 
 		<< today.day() << endl;
 	return 0;
 }
