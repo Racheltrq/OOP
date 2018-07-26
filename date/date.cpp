@@ -23,8 +23,9 @@ void Date::add_month(int n){
 
 void Date::add_day(int n){
 	d += n;
-	if(isleap(y)) int numDay = month_days[int(m) - 1];
-	else int numDay = leap_month_days[int(m) - 1];
+	int numDay;
+	if(isleap(y)) numDay = month_days[int(m) - 1];
+	else numDay = leap_month_days[int(m) - 1];
 	while(d > numDay){
 		d -= numDay;
 		m = Month(int(m) + 1);
