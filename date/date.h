@@ -1,6 +1,6 @@
 class Date{
 	public:
-		Date(int y, int m, int d);
+		Date(int y, Month m, int d);
 		void add_day(int n);
 		void add_month(int n);
 		void add_year(int n);
@@ -10,7 +10,7 @@ class Date{
 		bool isvalid();
 	private:
 		int y;
-		int m;
+		Month m;
 		int d;
 };
 

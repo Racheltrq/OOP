@@ -1,7 +1,7 @@
 #include "std_lib_facilities.h"
 #include "date.h"
 
-Date::Date(int yy, int mm, int dd)
+Date::Date(int yy, Month mm, int dd)
 :y{yy}, m{mm}, d{dd}
 {
 	if(!isvalid()){
@@ -18,9 +18,9 @@ void Date::add_month(int n){
 
 void Date::add_day(int n){
 	d += n;
-	if(d > vector[m - 1]){
+	if(d > month[m - 1]){
 		m += 1;
-		
+
 	}
 }
 
