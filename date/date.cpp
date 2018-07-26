@@ -39,6 +39,6 @@ int Date::day(){
 }
 
 bool Date::isvalid(){
-	if((m < 1) || (m > 12)) return false;
+	if((int(m) < 1) || (int(m) > 12)) return false;
 	else return true;
 }
