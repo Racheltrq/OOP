@@ -10,7 +10,7 @@ class Date{
 		void add_month(int n);
 		void add_year(int n);
 		int year();
-		int month();
+		Month month();
 		int day();
 		bool isvalid();
 	private:
@@ -20,7 +20,7 @@ class Date{
 };
 
 Month operator++(Month &m){
-	m = (m == Dec) ? Jan : Month(m + 1);
+	m = (m == Month::Dec) ? Jan : Month(m + 1);
 	return m;
 }
 
