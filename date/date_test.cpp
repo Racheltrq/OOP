@@ -5,7 +5,10 @@ int main(){
 	Date today{2018, Month::jul, 20};
 	cout << "Today: " << today.year() << "/" << int(today.month()) << "/" 
 		<< today.day() << endl;
-	today.add_day(1);
+	cout << "How many days do you want to add? "
+	int addDay;
+	cin >> addDay;
+	today.add_day(addDay);
 	cout << today.day() << endl;
 	return 0;
 }
