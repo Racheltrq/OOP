@@ -19,11 +19,11 @@ void Date::add_month(int n){
 }
 
 void Date::add_day(int n){
-	d += n;
-	if(d > month[m - 1]){
-		m += 1;
+	//d += n;
+	//if(d > month[int(m) - 1]){
+	//	m = Month(int(m) + 1);
 
-	}
+	//}
 }
 
 int Date::year(){
