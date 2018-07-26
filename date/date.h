@@ -1,3 +1,8 @@
+enum class Month{
+	jan=1, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec
+}
+
+
 class Date{
 	public:
 		Date(int y, Month m, int d);
@@ -13,12 +18,6 @@ class Date{
 		Month m;
 		int d;
 };
-
-enum class Month{
-	jan=1, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec
-}
-
-
 
 Month operator++(Month &m){
 	m = (m == Dec) ? Jan : Month(m + 1);
