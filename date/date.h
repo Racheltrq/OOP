@@ -20,7 +20,8 @@ class Date{
 };
 
 Month operator++(Month &m){
-	m = (m == Month::dec) ? (Month::jan) : Month(m + 1);
+	
+	m = (m == Month::dec) ? (Month::jan) : Month(int(m) + 1);
 	return m;
 }
 
