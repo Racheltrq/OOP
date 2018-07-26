@@ -48,7 +48,7 @@ bool Date::isvalid(){
 	else return true;
 }
 
-bool Date::isleap(y){
+bool Date::isleap(int y){
 	if(y % 4 == 0){
 		if(y % 100 == 0) return false;
 		else return true;
