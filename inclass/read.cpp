@@ -2,9 +2,9 @@
 
 struct reading{
 	int a;
-	string b;
+	char b;
 	double c;
-	string d;
+	char d;
 	double e;
 };
 
@@ -23,14 +23,14 @@ int main(){
 
 	vector<reading> temps;
 	int a;
-	string b;
+	char b;
 	double c;
-	string d;
+	char d;
 	double e;
 	while(ist >> a >> b >> c >> d >> e){
 		temps.push_back(reading{a, b, c, d, e});
 	}
 	for (int i = 0; i < temps.size(); i++){
-		ost << temps[i].a << "	" << temps[i].c << "	" << temps[i].e << "\n";
+		ost << "	" << temps[i].c << "	" << temps[i].e << "\n";
 	}
 }
