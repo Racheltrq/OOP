@@ -20,7 +20,7 @@ void Date::add_month(int n){
 
 void Date::add_day(int n){
 	d += n;
-	numDay = month[int(m) - 1]
+	int numDay = month[int(m) - 1];
 	while(d > numDay){
 		d -= month[int(m)];
 		m = Month(int(m) + 1);
