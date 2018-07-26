@@ -1,5 +1,4 @@
-vector<int> month_days = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-vector<int> leap_month_days = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+
 
 enum class Month{
 	jan=1, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec
