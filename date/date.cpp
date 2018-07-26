@@ -1,6 +1,9 @@
 #include "std_lib_facilities.h"
 #include "date.h"
 
+vector<int> month_days = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+vector<int> leap_month_days = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+
 Date::Date(int yy, Month mm, int dd)
 :y{yy}, m{mm}, d{dd}
 {
