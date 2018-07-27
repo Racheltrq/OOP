@@ -10,6 +10,7 @@ int main(){
 	today.add_day(addDay);
 	cout << today << endl;
 	cout << "Please enter a date in format (YYYY,MM,DD): ";
+	Date new_day;
 	cin >> new_day;
 	return 0;
 }
