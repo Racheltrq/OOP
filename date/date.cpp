@@ -25,7 +25,7 @@ void Date::add_month(int n){
 void Date::add_day(int n){
 	d += n;
 	int numDay;
-	cout << "Here."
+	cout << "Here." << endl;
 	if(isleap(y)) numDay = month_days[int(m) - 1];
 	else numDay = leap_month_days[int(m) - 1];
 	while(d > numDay){
