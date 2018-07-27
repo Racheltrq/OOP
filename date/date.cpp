@@ -57,8 +57,8 @@ std::ostream& operator<<(ostream& os, Date& dt){
 
 bool Date::isvalid(){
 	if((int(m) < 1) || (int(m) > 12) || (d < 1)) return false;
-	else if(isleap(y) && (d > leap_month_days[m-1])) return false;
-	else if((!isleap()) && (d > month_days[m-1])) return false;
+	else if(isleap(y) && (d > leap_month_days[int(m)-1])) return false;
+	else if((!isleap()) && (d > month_days[int(m)-1])) return false;
 	else return true;
 }
 
