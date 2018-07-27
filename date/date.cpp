@@ -55,6 +55,12 @@ std::ostream& operator<<(ostream& os, Date& dt){
 	os << count_mon[int(dt.month())] << " " << dt.day() << ", " << dt.year();
 }
 
+std::istream& operator>>(istream& is, string x){
+	Date new_day{x.substr[1, 5], Month(stoi(x.substr[6, 8])), x.ubstr[9,11]};
+	is >> new_day;
+	return is;
+}
+
 bool Date::isvalid(){
 	if((int(m) < 1) || (int(m) > 12) || (d < 1)) return false;
 	else if(isleap(y) && (d > leap_month_days[int(m)-1])) return false;
