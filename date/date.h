@@ -23,4 +23,4 @@ class Date{
 };
 
 
-std::ostream& operator<<(istream& os, const Date& dt);
+ostream& operator<<(istream& os, Date& dt);
