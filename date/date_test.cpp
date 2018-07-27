@@ -3,7 +3,7 @@
 
 int main(){
 	cout << "Please enter a date in format (YYYY,MM,DD): ";
-	Date new_day{};
+	Date new_day;
 	cin >> new_day;
 	cout << "How many days do you want to add? ";
 	int addDay;
