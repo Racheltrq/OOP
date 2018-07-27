@@ -10,6 +10,7 @@ int main(){
 	cin >> addDay;
 	today.add_day(addDay);
 	cout << today.day() << endl;
+	cout << today;
 	return 0;
 }
 

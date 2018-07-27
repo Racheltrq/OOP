@@ -3,6 +3,7 @@
 
 vector<int> month_days = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 vector<int> leap_month_days = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+string count_mon[13] = {"", "jJanuary", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
 
 Date::Date(int yy, Month mm, int dd)
 :y{yy}, m{mm}, d{dd}
@@ -52,6 +53,9 @@ Month Date::operator++(int){
 	return m;
 }
 
+ostream& operator<<(istream& os, const Date& dt){
+	os << count_mon[int(dt.m)] << " " << dt.d << " " << dt.y;
+}
 
 bool Date::isvalid(){
 	if((int(m) < 1) || (int(m) > 12)) return false;
