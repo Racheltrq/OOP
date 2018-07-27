@@ -53,7 +53,7 @@ Month Date::operator++(int){
 	return m;
 }
 
-ostream& Date::operator<<(istream& os, const Date& dt){
+ostream& operator<<(istream& os, const Date& dt){
 	os << count_mon[int(dt.month())] << " " << dt.day() << " " << dt.year();
 }
 
