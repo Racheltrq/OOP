@@ -5,7 +5,9 @@ int main(){
 	cout << "Please enter a date in format (YYYY,MM,DD): ";
 	Date new_day;
 	cin >> new_day;
-
+	if(!new_day.isvalid()){
+		throw invalid_argument("Invalid month.");
+	}
 	cout << "How many days do you want to add? ";
 	int addDay;
 	cin >> addDay;
@@ -17,7 +19,7 @@ int main(){
 	cin >> day2;
 	if (new_day == day2) cout << "Same date." << endl;
 	else cout << "Different date" << endl;
-	
+
 	cout << new_day << " != (Please enter another date): ";
 	cin >> day2;
 	if (new_day != day2) cout << "Different date." << endl;
