@@ -29,7 +29,7 @@ void Date::add_day(int n){
 	while(d > numDay){
 		d -= numDay;
 		int temp  = int(m);
-		m = Month(temp++ );
+		m = Month(temp++);
 		//m = Month(int(m) + 1);
 	}
 }
