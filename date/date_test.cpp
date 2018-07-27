@@ -10,8 +10,8 @@ int main(){
 	today.add_day(addDay);
 	cout << today << endl;
 	cout << "Please enter a date in format (YYYY,MM,DD): ";
-	Date new_day{0, Month(0), 0};
-	cin >> new_day;
+	Date new_day{0, Month(1), 1};
+	x >> new_day;
 	return 0;
 }
 
