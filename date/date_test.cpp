@@ -3,14 +3,12 @@
 
 int main(){
 	Date today{2008, Month::feb, 20};
-	cout << "Today: " << today.year() << "/" << int(today.month()) << "/" 
-		<< today.day() << endl;
+	cout << today << endl;
 	cout << "How many days do you want to add? ";
 	int addDay;
 	cin >> addDay;
 	today.add_day(addDay);
-	cout << today.day() << endl;
-	cout << today;
+	cout << today << endl;
 	return 0;
 }
 
