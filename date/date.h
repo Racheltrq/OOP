@@ -13,7 +13,7 @@ class Date{
 		int day();
 		bool isvalid();
 		bool isleap(int y);
-		Month operator++();
+		//Month operator++();
 		
 	private:
 		int y;

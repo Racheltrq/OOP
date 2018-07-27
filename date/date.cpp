@@ -29,9 +29,7 @@ void Date::add_day(int n){
 	else numDay = leap_month_days[int(m) - 1];
 	while(d > numDay){
 		d -= numDay;
-		
-		m++;
-		//m = Month(int(m) + 1);
+		m = Month(int(m) + 1);
 	}
 }
 
@@ -46,13 +44,13 @@ Month Date::month(){
 int Date::day(){
 	return d;
 }
-
-Month Date::operator++(){
+/*
+Month month::operator++(){
 	cout << "!" << endl;
 	m = (m == Month::dec) ? (Month::jan) : Month(int(m) + 1);
 	return m;
 }
-
+*/
 std::ostream& operator<<(ostream& os, Date& dt){
 	os << count_mon[int(dt.month())] << " " << dt.day() << " " << dt.year();
 }
