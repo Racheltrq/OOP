@@ -14,12 +14,11 @@ class Date{
 		bool isvalid();
 		bool isleap(int y);
 		Month operator++(int);
-		ostream& operator<<(istream& os, const Date& dt);
-
+		
 	private:
 		int y;
 		Month m;
 		int d;
 };
 
-
+ostream& operator<<(ostream& os, const Date& dt);
