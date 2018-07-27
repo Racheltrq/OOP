@@ -35,15 +35,15 @@ void Date::add_day(int n){
 	}
 }
 
-int Date::year() const{
+int Date::year(){
 	return y;
 }
 
-Month Date::month() const{
+Month Date::month(){
 	return m;
 }
 
-int Date::day() const{
+int Date::day(){
 	return d;
 }
 
@@ -53,7 +53,7 @@ Month Date::operator++(int){
 	return m;
 }
 
-std::ostream& operator<<(ostream& os, const Date& dt){
+std::ostream& operator<<(ostream& os, Date& dt){
 	os << count_mon[int(dt.month())] << " " << dt.day() << " " << dt.year();
 }
 
