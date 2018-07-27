@@ -35,15 +35,15 @@ void Date::add_day(int n){
 	}
 }
 
-int Date::year(){
+int Date::year() const{
 	return y;
 }
 
-Month Date::month(){
+Month Date::month() const{
 	return m;
 }
 
-int Date::day(){
+int Date::day() const{
 	return d;
 }
 
