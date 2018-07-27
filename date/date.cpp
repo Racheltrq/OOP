@@ -52,7 +52,7 @@ Month month::operator++(){
 }
 */
 std::ostream& operator<<(ostream& os, Date& dt){
-	os << count_mon[int(dt.month())] << " " << dt.day() << " " << dt.year();
+	os << count_mon[int(dt.month())] << " " << dt.day() << ", " << dt.year();
 }
 
 bool Date::isvalid(){
