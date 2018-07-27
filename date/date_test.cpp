@@ -14,6 +14,12 @@ int main(){
 	new_day.add_day(addDay);
 	cout << new_day << endl;
 
+	cout << "How many months do you want to add? ";
+	int addMonth;
+	cin >> addMonth;
+	new_day.add_month(addMonth);
+	cout << new_day << endl;
+
 	cout << new_day << " == (Please enter another date): ";
 	Date day2;
 	cin >> day2;
