@@ -20,7 +20,7 @@ void Date::add_year(int n){
 }
 
 void Date::add_month(int n){
-	m += n;
+	m = Month(int(m) + n);
 	while(int(m) > 12){
 		m = Month(int(m) - 12);
 		y++;
