@@ -15,7 +15,7 @@ class Date{
 		bool isleap(int y);
 		//Month operator++();
 		
-	private:
+
 		int y;
 		Month m;
 		int d;
