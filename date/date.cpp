@@ -56,11 +56,12 @@ std::ostream& operator<<(ostream& os, Date& dt){
 }
 
 std::istream& operator>>(istream& is, Date& dt){
+	string x;
 	is >> x;
 	dt.y = stoi(x.substr(1, 5));
 	dt.m = Month(stoi(x.substr(6, 8)));
 	dt.d = stoi(x.substr(9,11));
-	
+
 }
 
 bool Date::isvalid(){
