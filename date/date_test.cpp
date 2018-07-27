@@ -14,12 +14,12 @@ int main(){
 	Date day2;
 	cin >> day2;
 	cout << "\n";
-	if (new_day == day2) cout << "Same date.";
-	else cout >> "Different date";
+	if (new_day == day2) cout << "Same date." << endl;
+	else cout >> "Different date" << endl;
 	cout << new_day << " != (Please enter another date): ";
 	cin >> day2;
 	cout << "\n";
-	if (new_day == day2) cout << "Different date.";
+	if (new_day != day2) cout << "Different date.";
 	else cout >> "Same date";
 	return 0;
 }
