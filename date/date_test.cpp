@@ -19,8 +19,8 @@ int main(){
 	cout << new_day << " != (Please enter another date): ";
 	cin >> day2;
 	cout << "\n";
-	if (new_day != day2) cout << "Different date.";
-	else cout >> "Same date";
+	if (new_day != day2) cout << "Different date." << endl;
+	else cout >> "Same date" << endl;
 	return 0;
 }
 
