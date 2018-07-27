@@ -3,9 +3,9 @@
 
 vector<int> month_days = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 vector<int> leap_month_days = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-string count_mon[13] = {"", "jJanuary", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+string count_mon[13] = {"", "January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
 
-Date::Date(int yy = 0, Month mm = Month(1), int dd = 1)
+Date::Date(int yy, Month mm, int dd)
 :y{yy}, m{mm}, d{dd}
 {
 	if(!isvalid()){

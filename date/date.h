@@ -4,7 +4,7 @@ enum class Month{
 
 class Date{
 	public:
-		Date(int y, Month m, int d);
+		Date(int y = 0, Month m = Month(1), int d = 1);
 		void add_day(int n);
 		void add_month(int n);
 		void add_year(int n);
