@@ -23,3 +23,5 @@ class Date{
 
 ostream& operator<<(ostream& os, Date& dt);
 istream& operator>>(istream& is, Date& dt);
+bool operator==(const Date& dt1, const Date& dt2);
+bool operator!=(const Date& dt1, const Date& dt2);

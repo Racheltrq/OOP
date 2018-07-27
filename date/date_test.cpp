@@ -10,6 +10,10 @@ int main(){
 	cin >> addDay;
 	new_day.add_day(addDay);
 	cout << new_day << endl;
+	cout << new_day << "== (Please enter another date): ";
+	Date day2;
+	cin >> day2;
+	cout << (new_day == day2);
 	return 0;
 }
 
