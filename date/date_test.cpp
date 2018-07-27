@@ -20,6 +20,12 @@ int main(){
 	new_day.add_month(addMonth);
 	cout << new_day << endl;
 
+	cout << "How many years do you want to add? ";
+	int addYear;
+	cin >> addYear;
+	new_day.add_year(addYear);
+	cout << new_day << endl;
+
 	cout << new_day << " == (Please enter another date): ";
 	Date day2;
 	cin >> day2;

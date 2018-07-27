@@ -16,7 +16,7 @@ Date::Date(int yy, Month mm, int dd)
 
 
 void Date::add_year(int n){
-
+	y += n;
 }
 
 void Date::add_month(int n){
