@@ -11,7 +11,7 @@ int main(){
 	cout << today << endl;
 	cout << "Please enter a date in format (YYYY,MM,DD): ";
 	Date new_day{0, Month(1), 1};
-	x >> new_day;
+	cin >> new_day;
 	return 0;
 }
 
