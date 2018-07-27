@@ -8,8 +8,8 @@ int main(){
 	cout << "How many days do you want to add? ";
 	int addDay;
 	cin >> addDay;
-	today.add_day(addDay);
-	cout << today << endl;
+	new_day.add_day(addDay);
+	cout << new_day << endl;
 	return 0;
 }
 
