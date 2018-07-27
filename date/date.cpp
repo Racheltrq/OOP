@@ -44,7 +44,7 @@ int Date::day(){
 	return d;
 }
 
-Month Date::operator++(const Month &m){
+Month Date::operator++(int){
 	
 	m = (m == Month::dec) ? (Month::jan) : Month(int(m) + 1);
 	return m;
