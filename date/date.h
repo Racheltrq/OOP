@@ -22,4 +22,4 @@ class Date{
 };
 
 ostream& operator<<(ostream& os, Date& dt);
-istream& operator>>(istream& is, string x);
+istream& operator>>(istream& is, Date& dt);
