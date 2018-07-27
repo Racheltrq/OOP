@@ -56,7 +56,7 @@ std::ostream& operator<<(ostream& os, Date& dt){
 }
 
 std::istream& operator>>(istream& is, string x){
-	Date new_day{x.substr[1, 5], Month(stoi(x.substr[6, 8])), x.ubstr[9,11]};
+	Date new_day{x.substr(1, 5), Month(stoi(x.substr(6, 8))), x.ubstr(9,11)};
 	is >> new_day;
 	return is;
 }
