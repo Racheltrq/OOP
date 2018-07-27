@@ -28,7 +28,8 @@ void Date::add_day(int n){
 	else numDay = leap_month_days[int(m) - 1];
 	while(d > numDay){
 		d -= numDay;
-		m = Month(((int) m) ++ );
+		temp  = int(m);
+		m = Month(temp++ );
 		//m = Month(int(m) + 1);
 	}
 }
