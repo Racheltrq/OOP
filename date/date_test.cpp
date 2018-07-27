@@ -2,16 +2,14 @@
 #include "date.h"
 
 int main(){
-	Date today{2008, Month::feb, 20};
-	cout << today << endl;
+	cout << "Please enter a date in format (YYYY,MM,DD): ";
+	Date new_day{0, Month(1), 1};
+	cin >> new_day;
 	cout << "How many days do you want to add? ";
 	int addDay;
 	cin >> addDay;
 	today.add_day(addDay);
 	cout << today << endl;
-	cout << "Please enter a date in format (YYYY,MM,DD): ";
-	Date new_day{0, Month(1), 1};
-	cin >> new_day;
 	return 0;
 }
 
