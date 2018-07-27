@@ -14,7 +14,7 @@ class Date{
 		bool isvalid();
 		bool isleap(int y);
 		Month operator++(int);
-		
+		ostream& operator<<(istream& os, const Date& dt);
 
 	private:
 		int y;
@@ -23,4 +23,3 @@ class Date{
 };
 
 
-ostream& operator<<(istream& os, Date& dt);
