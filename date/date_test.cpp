@@ -10,10 +10,17 @@ int main(){
 	cin >> addDay;
 	new_day.add_day(addDay);
 	cout << new_day << endl;
-	cout << new_day << "== (Please enter another date): ";
+	cout << new_day << " == (Please enter another date): ";
 	Date day2;
 	cin >> day2;
-	cout << (new_day == day2);
+	cout << "\n";
+	if (new_day == day2) cout << "Same date.";
+	else cout >> "Different date";
+	cout << new_day << " != (Please enter another date): ";
+	cin >> day2;
+	cout << "\n";
+	if (new_day == day2) cout << "Different date.";
+	else cout >> "Same date";
 	return 0;
 }
 
