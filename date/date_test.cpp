@@ -20,7 +20,7 @@ int main(){
 	cin >> day2;
 	cout << "\n";
 	if (new_day != day2) cout << "Different date." << endl;
-	else cout >> "Same date" << endl;
+	else cout << "Same date" << endl;
 	return 0;
 }
 
