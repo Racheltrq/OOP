@@ -55,10 +55,11 @@ std::ostream& operator<<(ostream& os, Date& dt){
 	os << count_mon[int(dt.month())] << " " << dt.day() << ", " << dt.year();
 }
 
-std::istream& operator>>(istream& is, string x){
-	Date new_day{stoi(x.substr(1, 5)), Month(stoi(x.substr(6, 8))), stoi(x.substr(9,11))};
-	is >> new_day;
-	return is;
+std::istream& operator>>(istream& is, Date& dt){
+	dt.y = stoi(x.substr(1, 5));
+	dt.m = Month(stoi(x.substr(6, 8)));
+	dt.d = stoi(x.substr(9,11));
+	is >> dt;
 }
 
 bool Date::isvalid(){
