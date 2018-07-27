@@ -80,7 +80,6 @@ bool operator!=(const Date& dt1, const Date& dt2){
 }
 
 bool Date::isvalid(){
-	cout << int(m);
 	if((int(m) < 1) || (int(m) > 12) || (d < 1)) return false;
 	else if(isleap(y) && (d > leap_month_days[int(m)-1])) return false;
 	else if((!isleap(y)) && (d > month_days[int(m)-1])) return false;
