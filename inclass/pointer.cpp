@@ -12,5 +12,5 @@ int main(){
 	//cout << dp << " has a value of " << *dp << endl;
 	//cout << "size of dp is: " << sizeof(dp);
 	cout << ip << " has a value of " << *ip << endl;
-	cout << "size of ip is: " << sizeof(ip);
+	cout << "size of ip is: " << sizeof(ip) << endl;
 }
