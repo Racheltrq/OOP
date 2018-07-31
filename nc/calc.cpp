@@ -6,6 +6,7 @@ double statement(Token_stream& ts);
 double expression(Token_stream& ts);
 double primary(Token_stream& ts);
 double term(Token_stream& ts);
+double expon(Token_stream& ts);
 
 
 
@@ -89,6 +90,10 @@ double term(Token_stream& ts){
 	}
 }
 
+double expon(Token_stream& ts){
+	
+}
+
 double primary(Token_stream& ts){
 	Token t = ts.get();
 	while(true){
@@ -96,9 +101,7 @@ double primary(Token_stream& ts){
 		switch(t.kind){
 			case '(':
 			{
-				cout << "evaluate expression";
 				double expr = expression(ts);
-				cout << "Done";
 				t = ts.get();
 				if(t.kind != ')') error(") expected");
 				return expr;
