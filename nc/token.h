@@ -1,22 +1,27 @@
-#include "std_lib_facilities.h"
 
-class token{
+const char invalid = 'i';
+const char name = 'a';
+const char number = '8';
+const char quit = 'q';
+const char print = ';';
+const char power = '^';
+const char mod = '%';
+
+class Token{
 	public:
 		char kind;
-		double val;
+		double value;
 		string name;
-		token(char ch): kind{ch}{}
-		token(char ch, double v): kind{ch}, val{v}{}
-		token(char ch, string n): kind{ch}, name{n}{}
-};
+		Token(char ch): kind{ch} {}
+		Token(char ch, double val): kind{ch}, value{val}{}
+		Token(char ch, string n): kind{ch}, name{n}{}
+	};
 
-class token_stream{
+class Token_stream{
 	public:
-		token get();
-		token popback();
-		void putback(token t);
-		
+		Token get();
+		void putback(Token t);
+		Token popback();
 	private:
-		vector<token> buffer;
+		vector<Token> buffer;
 };
-

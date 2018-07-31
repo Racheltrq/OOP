@@ -1,54 +1,60 @@
 #include "std_lib_facilities.h"
 #include "token.h"
 
-token token_stream::get(){
-	while(buffer.size() > 0){
-		token t = buffer.back();
-		buffer.pop_back();
+void Token_stream::putback(Token t){
+	buffer.push_back(t);
+}
+
+Token Token_stream::popback(){
+	Token t = buffer.back();
+    buffer.pop_back();
+	return t;
+}
+
+Token Token_stream::get(){
+	if (buffer.size() > 0){
+		Token t = popback();
 		return t;
 	}
 	char ch;
 	cin >> ch;
 	switch(ch){
+		case ';':
+		case 'q':
+		case '(':
+		case ')':
 		case '+':
 		case '-':
 		case '*':
 		case '/':
-		case '%':
-		case '(':
-		case ')':
-		case ';':
-		case '^':
-			return token{ch};
-		case '1':
-		case '2':
-		case '3':
-		case '4':
-		case '5':
-		case '6':
-		case '7':
-		case '8':
-		case '9':
-		case '0':
+        case '=':
+		case mod:
+		case power:
+		return Token{ch};
 		case '.':
+		case '0': case '1': case '2': case '3': case '4':
+		case '5': case '6': case '7': case '8': case '9':
 		{
 			cin.putback(ch);
-			double a;
-			cin >> a;
-			return token{'n', a};
+			double val;
+			cin >> val;
+			return Token{number, val};
 		}
-		default: // is var
-			return token{'q'};
+		
+		default:
+			if(isalpha(ch)){
+				string s;
+				s += ch;
+				while(cin.get(ch) && (isalpha(ch) || isdigit(ch)))
+					s += ch;
+				cin.putback(ch);
+				return Token{name, s};
+
+			}
+
+			return Token{invalid, double(ch)};
+		
 	}
+	return Token{quit};
 
-}
-
-token token_stream::popback(){
-	token t = buffer.back();
-	buffer.pop_back();
-	return t;
-}
-
-void token_stream::putback(token t){
-	buffer.push_back(t);
 }
