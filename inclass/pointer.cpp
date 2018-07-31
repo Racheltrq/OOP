@@ -8,7 +8,7 @@ int main(){
 	//double* dp = &dp;
 	int* ip = &i;
 	cout << cp << " has a value of " << *cp << endl;
-	cout << "size of cp is: " << sizeof(cp);
+	cout << "size of cp is: " << sizeof(cp) << endl;
 	//cout << dp << " has a value of " << *dp << endl;
 	//cout << "size of dp is: " << sizeof(dp);
 	cout << ip << " has a value of " << *ip << endl;
