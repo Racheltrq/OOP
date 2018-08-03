@@ -29,10 +29,10 @@ double statement(Token_stream& ts){
 		}
 		else{
 			string s = "" + t.kind;
+			cout << s << endl;
 			cout << get_value(s) << endl;
 			double temp = get_value(s);
 			ts.putback(temp);
-			cout << temp << endl;
 			ts.putback(t);
 			double d = expression(ts);
 			return d;
