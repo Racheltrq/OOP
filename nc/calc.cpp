@@ -1,4 +1,5 @@
 #include "std_lib_facilities.h"
+#include <cmath>
 #include "token.h"
 #include "vars.h"
 
@@ -57,31 +58,31 @@ double expression(Token_stream& ts){
 }
 
 double term(Token_stream& ts){
-	double left = primary(ts);
+	double left = expon(ts);
 	Token t = ts.get();
 	while (true){
 		switch(t.kind){
 			case '*':
-				left *= primary(ts);
+				left *= expon(ts);
 				break;
 			case '/':
 			{
-				double temp = primary(ts);
+				double temp = expon(ts);
 				if(temp == 0) error("Divide by zero.");
 				left /= temp;
 				break;
 			}
 			case '%':
 			{
-				double temp = primary(ts);
+				double temp = expon(ts);
 				if(temp == 0) error("Divide by zero.");
 
 				left = fmod(left, temp);
 				break;
 			}
-			case power:
-				left = pow(left, primary(ts));
-				break;
+			//case power:
+			//	left = pow(left, expon(ts));
+			//	break;
 			default:
 				ts.putback(t);
 				return left;
@@ -91,8 +92,21 @@ double term(Token_stream& ts){
 }
 
 double expon(Token_stream& ts){
-	
+	double left = primary(ts);
+	Token t = ts.get();
+	while(true){
+		if(t.kind == power){
+			left = power(left, primary(ts));
+			
+		}
+		else{
+			ts.putback();
+			return left;
+		}
+		t = ts.get();
+	}
 }
+
 
 double primary(Token_stream& ts){
 	Token t = ts.get();
