@@ -104,7 +104,7 @@ double expon(Token_stream& ts){
 	Token t = ts.get();
 	while(true){
 		if(t.kind == power){
-			left = power(left, primary(ts));
+			left = pow(left, primary(ts));
 			
 		}
 		else{
