@@ -21,7 +21,7 @@ vect::vect(const vect& arg):sz{arg.sz}, elem{new double[arg.sz]}{
 	copy(arg.elem, arg.elem + arg.sz, elem);
 }
 
-vect& vect::operator=(cont vect& a){
+vect& vect::operator=(const vect& a){
 	double* p = new double[a.sz];
 	copy(a.elem, a.elem, p);
 	delete[] elem;
