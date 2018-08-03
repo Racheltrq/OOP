@@ -14,7 +14,7 @@ double expon(Token_stream& ts);
 double statement(Token_stream& ts){
 	Token t = ts.get();
 	if(t.kind == name){
-		temp = t.kind;
+		char temp = t.kind;
 		Token var = t;
 //		cout << "A var with a name " << var.name << endl;
 		t = ts.get();
