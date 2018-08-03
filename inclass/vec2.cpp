@@ -28,3 +28,8 @@ vect& vect::operator=(const vect& a){
 	sz = a.sz;
 	return *this;
 }
+
+int main(){
+    f();
+
+}
