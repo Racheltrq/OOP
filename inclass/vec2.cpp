@@ -11,8 +11,8 @@ public:
 		elem[i] = d;
 	}
 	vect(int s):sz{s}, elem{new double [s]}{}
-	vect(const vect&);
-
+	vect(const vect& a);
+	vect& operator=(const vect& a);
 	~vect(){delete elem;}
 };
 
