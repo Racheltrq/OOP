@@ -35,7 +35,7 @@ void f(){
     vect v2 = v;
     v.set(1,9.9);
     v2.set(0,8.8);
-    cout << v.get(0) << ' ' << v2.get(1);
+    cout << v.get(0) << ' ' << v2.get(1) << endl;
 }
 
 int main(){
