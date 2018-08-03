@@ -36,6 +36,7 @@ void f(){
     v.set(1,9.9);
     v2.set(0,8.8);
     cout << v.get(0) << ' ' << v2.get(1) << endl;
+    cout << v.get(1) << ' ' << v2.get(0) << endl;
 }
 
 int main(){
