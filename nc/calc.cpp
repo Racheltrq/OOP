@@ -28,7 +28,8 @@ double statement(Token_stream& ts){
 			return get_value(var.name);
 		}
 		else{
-			string s = "" + t.kind;
+			string s;
+			s.push_back(t.kind);
 			cout << s << endl;
 			cout << get_value(s) << endl;
 			double temp = get_value(s);
