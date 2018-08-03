@@ -14,3 +14,17 @@ public:
 	~vect(){delete elem;}
 };
 
+void f(){
+    vect v(3);
+    v.set(2,2.2);
+    vect v2 = v;
+    v.set(1,9.9);
+    v2.set(0,8.8);
+    cout << v.get(0) << ' ' << v2.get(1);
+}
+
+int main(){
+    f();
+
+}
+
