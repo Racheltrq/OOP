@@ -10,7 +10,7 @@ public:
 	void set(int i, double d){
 		elem[i] = d;
 	}
-	vect(int s):sz{s}, elem{new double s[]}{}
+	vect(int s):sz{s}, elem{new double [s]}{}
 	~vect(){delete elem;}
 };
 
