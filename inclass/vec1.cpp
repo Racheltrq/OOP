@@ -5,10 +5,11 @@ class vect{
 	double* elem;
 public:
 	double get(int i){
-		return elem;
+		return elem[i];
 	}
 	void set(int i, double d){
 		elem[i] = d;
 	}
+
 }
 
