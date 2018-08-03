@@ -28,7 +28,8 @@ double statement(Token_stream& ts){
 			return get_value(var.name);
 		}
 		else{
-			double temp = get_value(t.kind);
+			string s = "" + t.kind;
+			double temp = get_value(s);
 			ts.putback(temp);
 			ts.putback(t);
 			double d = expression(ts);
