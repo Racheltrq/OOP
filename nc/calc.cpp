@@ -108,7 +108,7 @@ double expon(Token_stream& ts){
 			
 		}
 		else{
-			ts.putback();
+			ts.putback(t);
 			return left;
 		}
 		t = ts.get();
