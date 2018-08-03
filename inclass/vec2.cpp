@@ -23,7 +23,7 @@ vect::vect(const vect& arg):sz{arg.sz}, elem{new double[arg.sz]}{
 
 vect& vect::operator=(const vect& a){
 	double* p = new double[a.sz];
-	copy(a.elem, a.elem, p);
+	copy(a.elem, a.elem + a.sz, p);
 	delete[] elem;
 	sz = a.sz;
 	return *this;
