@@ -27,6 +27,13 @@ double statement(Token_stream& ts){
 			ts.putback(t);
 			return get_value(var.name);
 		}
+		else{
+			temp = get_value(name);
+			ts.putback(temp);
+			ts.putback(t);
+			double d = expression(ts);
+			return d;
+		}
 //		ts.putback(t);
 //		ts.putback(var);
 //        cout << "unspecified variable operation \n";
