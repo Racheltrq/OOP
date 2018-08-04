@@ -128,7 +128,7 @@ double primary(Token_stream& ts){
 		switch(t.kind){
 			case '(':
 			{
-				double expr = expression(ts);
+				double expr = statement(ts);
 				t = ts.get();
 				if(t.kind != ')') error(") expected");
 				return expr;
