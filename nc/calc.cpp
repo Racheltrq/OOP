@@ -145,7 +145,8 @@ double primary(Token_stream& ts){
 				error("program ends");
 
 			default:
-				cout << t.kind << endl;
+                string s = "" + t.kind;
+				cout << s << endl;
 				error("primary expected");
 		}
 	t = ts.get();
