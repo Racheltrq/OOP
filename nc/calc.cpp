@@ -33,8 +33,9 @@ double statement(Token_stream& ts){
 			
 			cout << get_value(temp) << endl;
 			double d = get_value(temp);
-			ts.putback(d);
+
 			ts.putback(t);
+			ts.putback(d);
 			d = expression(ts);
 			return d;
 		}
