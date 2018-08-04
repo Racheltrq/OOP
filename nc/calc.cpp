@@ -29,9 +29,6 @@ double statement(Token_stream& ts){
 			return get_value(var.name);
 		}
 		else{
-			cout << temp << endl;
-			
-			cout << get_value(temp) << endl;
 			double d = get_value(temp);
 			Token a = {number, d};
 			ts.putback(t);
