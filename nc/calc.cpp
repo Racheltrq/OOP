@@ -30,14 +30,12 @@ double statement(Token_stream& ts){
 		}
 		else{
 			cout << temp << endl;
-			string s;
-			s.push_back(temp);
-			cout << s << endl;
-			cout << get_value(s) << endl;
-			double temp = get_value(s);
-			ts.putback(temp);
+			
+			cout << get_value(temp) << endl;
+			double d = get_value(temp);
+			ts.putback(d);
 			ts.putback(t);
-			double d = expression(ts);
+			d = expression(ts);
 			return d;
 		}
 //		ts.putback(t);
