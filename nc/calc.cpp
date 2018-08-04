@@ -52,6 +52,7 @@ double statement(Token_stream& ts){
 double expression(Token_stream& ts){
 	double left = term(ts);
 	Token t = ts.get();
+
 	while(true){
 		switch(t.kind){
 			case '+':
@@ -144,6 +145,7 @@ double primary(Token_stream& ts){
 				error("program ends");
 
 			default:
+				cout << t.kind << endl;
 				error("primary expected");
 		}
 	t = ts.get();
