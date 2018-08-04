@@ -35,7 +35,7 @@ double statement(Token_stream& ts){
 			double d = get_value(temp);
 			Token a = {number, d};
 			ts.putback(t);
-			ts.putback(d);
+			ts.putback(a);
 			d = expression(ts);
 			return d;
 		}
