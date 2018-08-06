@@ -2,8 +2,9 @@
 
 int main(){
 	int count = 0;
+	double* arr = new double[10000];
 	while(true){
-		double* arr = new double[10000];
+		arr = new double[10000];
 		count++;
 		cout << count << endl;
 	}
