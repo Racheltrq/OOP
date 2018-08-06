@@ -5,6 +5,7 @@ int main(){
 	double* arr = new double[10000];
 	while(true){
 		arr = new double[10000];
+		arr = NULL;
 		count++;
 		cout << count << endl;
 	}
