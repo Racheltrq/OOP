@@ -1,7 +1,5 @@
 #include "std_lib_facilities.h"
 
-vector<variable> var_table;
-
 class variable{
 	public:
 		string name;
