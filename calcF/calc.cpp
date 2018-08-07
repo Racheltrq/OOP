@@ -28,6 +28,7 @@ double statement(Token_stream& ts){
 			ts.putback(t);
 			return get_value(var.name);
 		}
+		/*
 		else{
 			double d = get_value(temp);
 			Token a = {number, d};
@@ -36,6 +37,7 @@ double statement(Token_stream& ts){
 			d = expression(ts);
 			return d;
 		}
+		*/
 //		ts.putback(t);
 //		ts.putback(var);
 //        cout << "unspecified variable operation \n";
