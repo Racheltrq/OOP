@@ -137,10 +137,9 @@ double primary(Token_stream& ts){
 			case '-':
 				return -primary(ts);
 			case name:
-				return name;
+				return var_table[t.value];
 			case 'q':
 				error("program ends");
-
 			default:
                 string s = "" + t.kind;
 				cout << s << endl;
