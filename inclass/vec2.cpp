@@ -4,12 +4,7 @@ class vect{
 	int sz;
 	double* elem;
 public:
-	double get(int i){
-		return elem[i];
-	}
-	void set(int i, double d){
-		elem[i] = d;
-	}
+	double& operator[](int n){ return elem[n]; }
 	vect(int s):sz{s}, elem{new double [s]}{}
 	vect(const vect& a);
 	vect& operator=(const vect& a);
