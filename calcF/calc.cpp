@@ -137,7 +137,7 @@ double primary(Token_stream& ts){
 			case '-':
 				return -primary(ts);
 			case name:
-				return var_table[t.value];
+				return get_value(t.name);
 			case 'q':
 				error("program ends");
 			default:
