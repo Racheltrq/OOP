@@ -142,8 +142,7 @@ double primary(Token_stream& ts){
 				return get_value(t.name); //put var value into the function
 			case 'q':
 				error("program ends");
-			case 'h':
-				return 0;
+			
 			case trig:
 			{
 				double res;
