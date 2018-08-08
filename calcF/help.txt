@@ -1,9 +1,0 @@
-assign var:
-eg. x=3*2;
-
-evaluate function:
-eg. x=3;
-	3+x-2;
-
-evaluate trignometric function:
-eg. sin(3);
