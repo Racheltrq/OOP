@@ -146,27 +146,13 @@ double primary(Token_stream& ts){
 			case trig:
 			{
 				double res;
-				switch(t.name){
-					case "sin":
-						res = sin(primary(ts)); 
-						break;
-					case "cos":
-						res = cos(primary(ts));
-						break;
-					case "tan":
-						res = tan(primary(ts));
-						break;
-					case "cot":
-						res = cot(primary(ts));
-						break;
-					case "sec":
-						res = sec(primary(ts));
-						break;
-					case "csc":
-						res = csc(primary(ts));
-						break;
+				if(t.name == "sin") res = sin(primary(ts)); 
+				else if(t.name == "cos") res = cos(primary(ts));
+				else if(t.name == "tan") res = tan(primary(ts));
+				else if(t.name == "cot") res = cot(primary(ts));
+				else if(t.name == "sec") res = sec(primary(ts));
+				else if(t.name == "csc") res = csc(primary(ts));
 				return res;
-				}
 			}
 
 			default:
