@@ -8,8 +8,7 @@ double expression(Token_stream& ts);
 double primary(Token_stream& ts);
 double term(Token_stream& ts);
 double expon(Token_stream& ts);
-
-
+void help();
 
 double statement(Token_stream& ts){
 	Token t = ts.get();
@@ -167,7 +166,12 @@ double primary(Token_stream& ts){
 	}
 }
 
+void help(){
+	cout << "assign var: \neg. x=3*2; \nevaluate function: \neg. x=3; \n3+x-2; \nevaluate trignometric function: \neg. sin(3);"
+}
+
 int main(){
+	cout << "Please enter an expression(enter 'h' to get help, 'q' to quit)" << endl;
 	Token_stream ts;
 
 	while (cin){
@@ -175,6 +179,7 @@ int main(){
 		Token t = ts.get();
 		while(t.kind == print) t = ts.get();
 		if (t.kind == quit) return 0;
+		if(t.kind == help) 
 		
 		ts.putback(t);
 		cout << "=" << statement(ts) << '\n';
