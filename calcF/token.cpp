@@ -49,7 +49,10 @@ Token Token_stream::get(){
 				while(cin.get(ch) && (isalpha(ch) || isdigit(ch)))
 					s += ch;
 				cin.putback(ch);
-				//if((s == "sin") || (s == "cos") || (s == "tan") || (s == "cot") || (s == "sec") || (s == "csc"))
+				if((s == "sin") || (s == "cos") || (s == "tan") || 
+					(s == "cot") || (s == "sec") || (s == "csc")){
+					return Token{trig, s};
+				}
 				return Token{name, s};
 
 			}

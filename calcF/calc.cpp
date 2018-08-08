@@ -93,9 +93,6 @@ double term(Token_stream& ts){
 				left = fmod(left, temp);
 				break;
 			}
-			//case power:
-			//	left = pow(left, expon(ts));
-			//	break;
 			default:
 				ts.putback(t);
 				return left;
@@ -146,6 +143,32 @@ double primary(Token_stream& ts){
 				return get_value(t.name); //put var value into the function
 			case 'q':
 				error("program ends");
+			case trig:
+			{
+				double res;
+				switch(t.name){
+					case "sin":
+						res = sin(primary(ts)); 
+						break;
+					case "cos":
+						res = cos(primary(ts));
+						break;
+					case "tan":
+						res = tan(primary(ts));
+						break;
+					case "cot":
+						res = cot(primary(ts));
+						break;
+					case "sec":
+						res = sec(primary(ts));
+						break;
+					case "csc":
+						res = csc(primary(ts));
+						break;
+				return res;
+				}
+			}
+
 			default:
                 string s = "" + t.kind;
 //				cout << s << endl;
