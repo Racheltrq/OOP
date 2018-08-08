@@ -8,7 +8,7 @@ double expression(Token_stream& ts);
 double primary(Token_stream& ts);
 double term(Token_stream& ts);
 double expon(Token_stream& ts);
-void help();
+//void help();
 
 double statement(Token_stream& ts){
 	Token t = ts.get();
