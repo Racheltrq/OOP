@@ -40,8 +40,8 @@ double statement(Token_stream& ts){
 		*/
 		ts.putback(t);
 		ts.putback(var);
-//        cout << "unspecified variable operation \n";
-		cout << "Test print" << endl;
+//      cout << "unspecified variable operation \n";
+//		cout << "Test print" << endl;
 		return expression(ts);
 	}
 //    cout << "NON VARIABLE STATEMENT\n";
@@ -123,7 +123,7 @@ double expon(Token_stream& ts){
 
 double primary(Token_stream& ts){
 	Token t = ts.get();
-	cout << t.kind << endl;
+//	cout << t.kind << endl;
 	while(true){
 		//cout <<"token kind: " << t.kind, "token value: " << t.value;
 		switch(t.kind){
@@ -141,14 +141,14 @@ double primary(Token_stream& ts){
 			case '-':
 				return -primary(ts);
 			case name:
-				cout << "Done" << endl;
-				cout << get_value(t.name);
+//				cout << "Done" << endl;
+//				cout << get_value(t.name);
 				return get_value(t.name); //put var value into the function
 			case 'q':
 				error("program ends");
 			default:
                 string s = "" + t.kind;
-				cout << s << endl;
+//				cout << s << endl;
 				error("primary expected");
 		}
 	t = ts.get();
