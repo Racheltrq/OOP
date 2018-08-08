@@ -139,6 +139,7 @@ double primary(Token_stream& ts){
 			case '-':
 				return -primary(ts);
 			case name:
+				cout << get_value(t.name);
 				return get_value(t.name); //put var value into the function
 			case 'q':
 				error("program ends");

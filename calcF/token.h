@@ -6,6 +6,7 @@ const char quit = 'q';
 const char print = ';';
 const char power = '^';
 const char mod = '%';
+const char trig = 't';
 
 class Token{
 	public:
@@ -15,6 +16,7 @@ class Token{
 		Token(char ch): kind{ch} {}
 		Token(char ch, double val): kind{ch}, value{val}{}
 		Token(char ch, string n): kind{ch}, name{n}{}
+		Token(char ch, string n): kind{ch}, func{n}{}
 	};
 
 class Token_stream{
