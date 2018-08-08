@@ -40,6 +40,7 @@ Token Token_stream::get(){
 			cin >> val;
 			return Token{number, val};
 		}
+
 		
 		default:
 			if(isalpha(ch)){
@@ -48,6 +49,7 @@ Token Token_stream::get(){
 				while(cin.get(ch) && (isalpha(ch) || isdigit(ch)))
 					s += ch;
 				cin.putback(ch);
+				//if((s == "sin") || (s == "cos") || (s == "tan") || (s == "cot") || (s == "sec") || (s == "csc"))
 				return Token{name, s};
 
 			}
