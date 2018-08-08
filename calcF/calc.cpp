@@ -41,6 +41,7 @@ double statement(Token_stream& ts){
 //		ts.putback(t);
 //		ts.putback(var);
 //        cout << "unspecified variable operation \n";
+		cout << "Test print" << endl;
 		return expression(ts);
 	}
 //    cout << "NON VARIABLE STATEMENT\n";
