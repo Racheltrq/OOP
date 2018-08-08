@@ -40,7 +40,8 @@ Token Token_stream::get(){
 			cin >> val;
 			return Token{number, val};
 		}
-
+		case 'h':
+			return Token{help};
 		
 		default:
 			if(isalpha(ch)){
