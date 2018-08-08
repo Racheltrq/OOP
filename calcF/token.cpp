@@ -42,6 +42,8 @@ Token Token_stream::get(){
 		}
 		case 'h':
 			return Token{help};
+		case 'q':
+			return Token{quit};
 		
 		default:
 			if(isalpha(ch)){
