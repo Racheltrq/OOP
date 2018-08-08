@@ -123,6 +123,7 @@ double expon(Token_stream& ts){
 
 double primary(Token_stream& ts){
 	Token t = ts.get();
+	cout << t.kind << endl;
 	while(true){
 		//cout <<"token kind: " << t.kind, "token value: " << t.value;
 		switch(t.kind){
