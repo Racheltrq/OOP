@@ -143,7 +143,7 @@ double primary(Token_stream& ts){
 			case 'q':
 				error("program ends");
 			case 'h':
-				return 0;
+				return;
 			case trig:
 			{
 				double res;
