@@ -8,7 +8,7 @@ double expression(Token_stream& ts);
 double primary(Token_stream& ts);
 double term(Token_stream& ts);
 double expon(Token_stream& ts);
-//void help();
+void helper();
 
 double statement(Token_stream& ts){
 	Token t = ts.get();
@@ -166,7 +166,7 @@ double primary(Token_stream& ts){
 	}
 }
 
-void help(){
+void helper(){
 	cout << "assign var: \neg. x=3*2; \nevaluate function: \neg. x=3; \n3+x-2; \nevaluate trignometric function: \neg. sin(3);"
 }
 
