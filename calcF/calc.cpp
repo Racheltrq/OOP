@@ -167,8 +167,8 @@ double primary(Token_stream& ts){
 }
 
 void helper(){
-	cout << "assign var: \neg. x=3*2; \nevaluate function: \neg. x=3; \n3+x-2; \nevaluate trignometric function: \neg. sin(3);"
-};
+	cout << "assign var: \neg. x=3*2; \nevaluate function: \neg. x=3; \n3+x-2; \nevaluate trignometric function: \neg. sin(3);" << endl;
+}
 
 int main(){
 	cout << "Please enter an expression(enter 'h' to get help, 'q' to quit)" << endl;
