@@ -148,10 +148,10 @@ double primary(Token_stream& ts){
 				double res;
 				if(t.name == "sin") res = sin(primary(ts)); 
 				else if(t.name == "cos") res = cos(primary(ts));
+				else if(t.name == "atan") res = atan(primary(ts));
+				else if(t.name == "asin") res = asin(primary(ts));
+				else if(t.name == "acos") res = acos(primary(ts));
 				else if(t.name == "tan") res = tan(primary(ts));
-				else if(t.name == "cot") res = cot(primary(ts));
-				else if(t.name == "sec") res = sec(primary(ts));
-				else if(t.name == "csc") res = csc(primary(ts));
 				return res;
 			}
 

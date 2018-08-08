@@ -50,10 +50,10 @@ Token Token_stream::get(){
 					s += ch;
 				cin.putback(ch);
 				if((s == "sin") || (s == "cos") || (s == "tan") || 
-					(s == "cot") || (s == "sec") || (s == "csc")){
+					(s == "asin") || (s == "acos") || (s == "atan")){
 					return Token{trig, s};
 				}
-				return Token{name, s};
+				else return Token{name, s};
 
 			}
 
