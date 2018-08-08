@@ -184,7 +184,7 @@ int main(){
 		if(t.kind == help) {
 			helper();
 		}
-		Token t = ts.get();
+		t = ts.get();
 		while(t.kind == print) t = ts.get();
 		ts.putback(t);
 		cout << "=" << statement(ts) << '\n';
