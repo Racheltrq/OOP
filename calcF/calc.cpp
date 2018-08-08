@@ -179,8 +179,13 @@ int main(){
 		Token t = ts.get();
 		while(t.kind == print) t = ts.get();
 		if (t.kind == quit) return 0;
-		if(t.kind == help) helper();
-		
+
+		ts.putback(t);
+		if(t.kind == help) {
+			helper();
+		}
+		Token t = ts.get();
+		while(t.kind == print) t = ts.get();
 		ts.putback(t);
 		cout << "=" << statement(ts) << '\n';
 	}
