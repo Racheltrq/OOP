@@ -152,6 +152,9 @@ double primary(Token_stream& ts){
 				else if(t.name == "asin") res = asin(primary(ts));
 				else if(t.name == "acos") res = acos(primary(ts));
 				else if(t.name == "tan") res = tan(primary(ts));
+				else if(t.name == "log") res = log(primary(ts));
+				else if(t.name == "log2") res = log2(primary(ts));
+				else if(t.name == "log10") res = log10(primary(ts));
 				return res;
 			}
 
