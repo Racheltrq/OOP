@@ -38,7 +38,7 @@ double statement(Token_stream& ts){
 			return d;
 		}
 		*/
-//		ts.putback(t);
+		ts.putback(t);
 //		ts.putback(var);
 //        cout << "unspecified variable operation \n";
 		cout << "Test print" << endl;
